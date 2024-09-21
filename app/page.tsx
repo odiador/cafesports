@@ -27,7 +27,9 @@ export default function Home() {
       opacity: 1
     }
   };
-  const renderer = ({ days, hours, minutes, seconds, completed }: { days: any, hours: any, minutes: any, seconds: any, completed: any }) => {
+  const renderer = ({ days, hours, minutes, seconds, completed }: { days: number, hours: number, minutes: number, seconds: number, completed: boolean }) => {
+    console.log({ days, hours, minutes, seconds, completed});
+    
     const Cal = ({ round, n, type }: { round?: string, n: number, type?: string }) => {
       const fst = Number.parseInt((n / 10) + "");
       const sec = n % 10;
