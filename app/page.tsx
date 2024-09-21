@@ -1,5 +1,5 @@
 "use client";
-import { IconBrandInstagram, IconBrandTwitch, IconHome } from "@tabler/icons-react";
+import { IconBrandInstagram, IconBrandTwitch } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,10 +30,10 @@ export default function Home() {
       <div className="flex w-full p-2 gap-1">
         <h1 className="font-bold grow text">UQ E-Sports <strong className="font-bold text-[#f45865]">Valorant</strong></h1>
         <Link href={""}>
-          <IconBrandTwitch className="text-white hover:text-teal-200 hover:scale-110 transition-all" />
+          <IconBrandTwitch className="text-white hover:text-[#f45865] hover:scale-110 transition-all" />
         </Link>
         <Link href={"https://www.instagram.com/uq.esports/"}>
-        <IconBrandInstagram className="text-white hover:text-teal-200 hover:scale-110 transition-all" />
+        <IconBrandInstagram className="text-white hover:text-[#f45865] hover:scale-110 transition-all" />
         </Link>
       </div>
       <motion.div variants={container} initial="hidden" animate="visible" className="w-full max-h-full overflow-y-auto overflow-x-hidden mt-4 flex-grow flex flex-col gap-2 items-center">
@@ -55,7 +55,7 @@ export default function Home() {
         <motion.h1 variants={item} className="text-xs font-normal text-white/30">* solo Ingeniería de Sistemas y Computación *</motion.h1>
       </motion.div>
       <footer>
-        <Link href={"https://github.com/odiador"} className="cursor-default select-none py-1 text-xs font-normal text-white text-opacity-30 group hover:text-opacity-100 transition-colors">Made with ❤️ by <strong className="font-medium text-teal-200 text-opacity-30 group-hover:text-opacity-100 transition-colors">Amador</strong></Link>
+        <Link href={"https://github.com/odiador"} className="cursor-default select-none py-1 text-xs font-medium text-white text-opacity-15 group hover:text-opacity-100 transition-colors">Made with ❤️ by <strong className="font-medium text-[#f45865] text-opacity-15 group-hover:text-opacity-100 transition-colors">Amador</strong></Link>
       </footer>
     </div>
   );
