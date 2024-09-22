@@ -1,5 +1,4 @@
 "use client";
-import { IconLock } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Countdown from "react-countdown";
@@ -37,11 +36,11 @@ export default function Valorant() {
             </div>);
 
     };
-    return (<div className="flex flex-col gap-4 divide-8 justify-center items-center max-w-3xl h-fit py-3 px-8 rounded-lg bg-black/30 ">
-        <div>
+    return (<motion.div variants={container} initial="hidden" animate="visible" className="flex flex-col gap-4 divide-8 justify-center items-center max-w-3xl h-fit py-3 px-8 rounded-lg bg-black/30 ">
+        <motion.div variants={item}>
             <h1 className="text-2xl font-bold text-white">UQ E-Sports <strong className={`font-bold text-[${valorantInfo.color}]`}>{valorantInfo.title}</strong></h1>
             <p>{valorantInfo.description}</p>
-        </div>
+        </motion.div>
         <motion.div variants={item} className="w-fit flex flex-col items-center">
             <label className="font-medium text-center">Faltan:</label>
             <Countdown date={valorantInfo.startDate} renderer={renderer} />
@@ -53,5 +52,5 @@ export default function Valorant() {
             </motion.div>
         </motion.div>
         <Link href={valorantInfo.url} className="bg-white mt-2 px-2 transition-transform py-1 rounded-lg hover:scale-105 cursor-pointer text-black font-semibold self-end">Inscríbete</Link>
-    </div>)
+    </motion.div>)
 }
