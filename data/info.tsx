@@ -11,4 +11,37 @@ const valorantInfo = {
     aclarations: ["* solo Ingeniería de Sistemas y Computación *"]
 }
 
-export { valorantInfo };
+const integrantes = [
+    {
+        id: 0,
+        image: "/andres.png",
+        name: "Eyner Andrés Díaz"
+    },
+    {
+        id: 1,
+        image: "/juanda.png",
+        name: "Juan David López"
+    },
+    {
+        id: 2,
+        image: "/daniel.png",
+        name: "Daniel Jurado"
+    },
+    {
+        id: 3,
+        image: "/valeria.png",
+        name: "Valeria Florez"
+    },
+    {
+        id: 4,
+        image: "/amador.png",
+        name: "Juan Manuel Amador"
+    },
+    {
+        id: 5,
+        image: "/cristian.png",
+        name: "Cristian Sierra"
+    }
+]
+
+export { valorantInfo, integrantes };

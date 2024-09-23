@@ -29,11 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased mb-6 font-[family-name:var(--font-geist-sans)] overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable}  overflow-y-auto antialiased h-fit w-full font-[family-name:var(--font-geist-sans)] overflow-x-hidden`}
       >
         <div className="fixed -z-50 bg-gradient-radial from-[#321010] to-[#0a0a0a] pointer-events-none left-0 top-0 w-screen h-screen"></div>
         <Header />
-        {children}
+        <div className="mb-6 p-2 overflow-x-hidden overflow-y-hidden flex-col flex gap-2 items-center justify-top">
+          {children}
+        </div>
         <Footer/>
       </body>
     </html>
