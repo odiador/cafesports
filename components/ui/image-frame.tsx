@@ -32,15 +32,11 @@ export const AnimatedTooltip = ({
     useTransform(x, [-100, 100], [-50, 50]),
     springConfig
   );
-  const handleMouseMove = (event: any) => {
-    const halfWidth = event.target.offsetWidth / 2;
-    x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
-  };
   const variant = item;
 
   return (
     <div className="flex flex-wrap justify-center">
-      {items.map((item, idx) => (
+      {items.map((item) => (
         <motion.div
           variants={variant}
           className="-mr-4  relative group"
@@ -77,7 +73,10 @@ export const AnimatedTooltip = ({
             )}
           </AnimatePresence>
           <Image
-            onMouseMove={handleMouseMove}
+            onMouseMove={(event) => {
+              const halfWidth = (event?.target as HTMLElement).offsetWidth / 2;
+              x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
+            }}
             height={200}
             width={200}
             src={item.image}

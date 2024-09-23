@@ -10,8 +10,8 @@ import Link from "next/link";
 const scrolltoHash = function (element_id: string) {
   const element = document.getElementById(element_id);
   if (element) {
-    var elementPosition = element.getBoundingClientRect().top;
-    let offsetPosition = elementPosition + window.scrollY - 120;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - 120;
     window.scrollTo({
       top: offsetPosition,
       behavior: "smooth"
