@@ -67,8 +67,11 @@ export default function Home() {
         animate="visible"
         transition={{ duration: 0.5, delay: 0.2 }}
         className="bg-white/5 rounded-lg p-2 flex flex-col justify-center items-center">
-        <motion.h3 variants={item} className="text-center text-2xl font-semibold w-3/4">¡Bienvenidos a nuestro equipo de E-Sports!</motion.h3>
-        <motion.p variants={item} className="pt-4 p-2">
+        <motion.h3 variants={item} className="text-center text-4xl font-bold w-3/4 text-wrap">¡Bienvenidos a nuestro equipo de E-Sports!</motion.h3>
+        <motion.div className="mt-4 size-fit border-2 rounded-lg overflow-hidden">
+          <Image src={"/logo.jpg"} alt="Logo Transparent" className="size-64" width={256} height={256} />
+        </motion.div>
+        <motion.p variants={item} className="p-2">
           Somos un grupo de estudiantes apasionados por los deportes electrónicos, comprometidos con promover esta emocionante actividad en nuestra alma mater y en todo el territorio. Nos une el deseo de fomentar la competencia saludable, la colaboración, y la comunidad gamer. Creemos que los e-sports no solo son una forma de entretenimiento, sino también una plataforma para el desarrollo de habilidades, la creatividad, y el trabajo en equipo. ¡Únete a nosotros y se parte de esta increíble aventura!
         </motion.p>
         <motion.h3 variants={item} className="text-center text-2xl mt-8 font-semibold w-3/4">¿Quiénes somos?</motion.h3>
@@ -76,9 +79,8 @@ export default function Home() {
           Estudiantes de Ingeniería de Sistemas y Computación
         </motion.p>
         <motion.div variants={container} initial="hidden" animate={imageControls}
-          className="w-fit pt-2"><AnimatedTooltip items={integrantes} /></motion.div>
+          className="w-fit pt-2 pb-8"><AnimatedTooltip items={integrantes} /></motion.div>
       </motion.section>
-      <div className="h-screen w-1"></div>
     </main>
   );
 }
