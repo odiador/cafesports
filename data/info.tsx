@@ -28,11 +28,6 @@ const integrantes = [
         name: "Daniel Jurado"
     },
     {
-        id: 3,
-        image: "/valeria.png",
-        name: "Valeria Florez"
-    },
-    {
         id: 4,
         image: "/amador.png",
         name: "Juan Manuel Amador"
