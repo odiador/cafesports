@@ -54,8 +54,8 @@ export default function Home() {
           visible: {
             opacity: 1, scale: 1, transition: { duration: 0.2 }
           }
-        }} onClick={() => scrolltoHash("info")} animate={controls} id="bolita" className="border-white rounded-full h-12 w-fit border-4 border-solid px-1 transition-all cursor-pointer">
-          <motion.div className="bg-white rounded-full w-4 h-4" animate={{ y: [0, 24, 0] }} transition={{ ease: "easeInOut", duration: 1.5, repeat: Infinity, repeatType: 'loop' }}></motion.div>
+        }} onClick={() => scrolltoHash("info")} animate={controls} id="bolita" className="border-white/30 duration-300 hover:border-white group rounded-full h-12 w-fit border-4 border-solid px-1 transition-all cursor-pointer">
+          <motion.div className="bg-white/30 group-hover:bg-white transition-colors duration-300 rounded-full w-4 h-4" animate={{ y: [0, 24, 0] }} transition={{ ease: "easeInOut", duration: 1.5, repeat: Infinity, repeatType: 'loop' }}></motion.div>
         </motion.div>
       </header>
       <motion.section
