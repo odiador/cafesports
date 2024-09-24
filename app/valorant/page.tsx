@@ -29,10 +29,10 @@ export default function Valorant() {
         }
         return (
             <div className="flex gap-1 rounded-lg w-fit" >
-                {days != 0 && <Cal type="días" round="rounded-l-lg" n={days}></Cal>}
-                <Cal round={days != 0 ? "" : "rounded-l-lg"} type="horas" n={hours}></Cal>
-                <Cal round={days != 0 ? "rounded-r-lg" : ""} type="minutos" n={minutes}></Cal>
-                {days == 0 && <Cal round="rounded-r-lg" type="segundos" n={seconds}></Cal>}
+                <Cal type="días" round="rounded-l-lg" n={days}></Cal>
+                <Cal type="horas" n={hours}></Cal>
+                <Cal type="minutos" n={minutes}></Cal>
+                <Cal round="rounded-r-lg" type="segundos" n={seconds}></Cal>
             </div>);
 
     };
