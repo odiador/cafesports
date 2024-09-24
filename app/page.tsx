@@ -44,7 +44,7 @@ export default function Home() {
               <div className="flex flex-col gap-1">
                 <p className="text-lg text-left  font-bold text-white">UQ E-Sports <strong className={`font-bold text-[${valorantInfo.color}]`}>{valorantInfo.title}</strong></p>
                 <p>{valorantInfo.description}</p>
-                <Link href={valorantInfo.src} className="bg-white mt-2 px-2 transition-transform py-1 rounded-lg hover:scale-105 cursor-pointer text-black font-semibold self-end">Inscríbete</Link>
+                <Link href={valorantInfo.src} className="bg-white mt-2 px-2 transition-transform py-1 rounded-lg hover:scale-105 cursor-pointer text-black font-semibold self-end">Ver más</Link>
               </div>
             </motion.div>
           </motion.div>
