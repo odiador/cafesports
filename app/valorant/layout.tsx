@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "UQ E-Sports | Valorant",
-    description: "UQ E-Sports",
+    title: "In Remodeling | Valorant",
+    description: "In remodeling",
 };
 
 export default function RootLayout({
