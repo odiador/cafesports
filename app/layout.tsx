@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Image from "next/image";
-import { IconTool, IconToolsOff } from "@tabler/icons-react";
+import { IconTool } from "@tabler/icons-react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
