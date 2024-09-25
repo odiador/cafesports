@@ -14,7 +14,7 @@ export default function Header() {
         <Link href={"#"}>
             <IconBrandTwitch className="text-white hover:text-[#f45865] hover:scale-110 transition-all" />
         </Link>
-        <Link href={"https://www.instagram.com/uq.esports/"}>
+        <Link href={"https://www.instagram.com/cafesportq/"}>
             <IconBrandInstagram className="text-white hover:text-[#f45865] hover:scale-110 transition-all" />
         </Link>
     </div>;
