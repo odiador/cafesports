@@ -6,6 +6,7 @@ import { integrantes, valorantInfo } from "@/data/info";
 import { motion, useAnimation, useMotionValueEvent, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const scrolltoHash = function (element_id: string) {
   const element = document.getElementById(element_id);
@@ -30,10 +31,14 @@ export default function Home() {
       controls.start('visible');
     }
   })
+  const [start, setStart] = useState(false);
   return (
     <main className="p-2 flex flex-col items-center max-w-3xl">
       <header className="h-[calc(100vh-160px)] flex flex-col gap-1 items-center mb-32">
-        <TextGenerateEffect words="Uniquindio E-Sports" className="text-center text-4xl font-bold text-white" />
+        <motion.div variants={item} className="text-center text-4xl font-bold flex" >
+          <h1 className="text-[#fdd868]">CafE</h1>
+          <h1 className="text-[#66ffad]">Sports</h1>
+        </motion.div>
         <motion.p variants={item} initial="hidden" animate="visible" className="w-full text-left">
           Nuestro próximo evento:
         </motion.p>
@@ -42,7 +47,11 @@ export default function Home() {
             <motion.div variants={item} className="flex flex-col sm:flex-row  items-center bg-white/5 rounded-xl px-6 py-3">
               <Image priority src={valorantInfo.image} alt="" width={100} height={100} />
               <div className="flex flex-col gap-1">
-                <p className="text-lg text-left  font-bold text-white">UQ E-Sports <strong className={`font-bold text-[${valorantInfo.color}]`}>{valorantInfo.title}</strong></p>
+                <p className="text-lg text-left flex font-bold text-white">
+                  <h1 className="text-[#fdd868]">CafE</h1>
+                  <h1 className="text-[#66ffad]">Sports</h1>
+                  <h1 className="px-2">x</h1>
+                  <strong className={`font-bold text-[${valorantInfo.color}]`}>{valorantInfo.title}</strong></p>
                 <p>{valorantInfo.description}</p>
                 <Link href={valorantInfo.src} className="bg-white mt-2 px-2 transition-transform py-1 rounded-lg hover:scale-105 cursor-pointer text-black font-semibold self-end">Ver más</Link>
               </div>
@@ -65,19 +74,24 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 50 }}
         animate="visible"
+        variants={container}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="bg-white/5 rounded-lg p-2 flex flex-col justify-center items-center">
         <motion.h3 variants={item} className="text-center text-4xl font-bold w-3/4 text-wrap">¡Bienvenidos a nuestro equipo de E-Sports!</motion.h3>
-        <motion.div className="mt-4 size-fit border-2 rounded-lg overflow-hidden">
-          <Image src={"/logo.jpg"} alt="Logo Transparent" className="size-64" width={256} height={256} />
+        <motion.div variants={item} className="mt-4 size-fit bg-white rounded-xl overflow-hidden">
+          <Image src={"/logot.png"} alt="Logo Transparent" className="size-64" width={256} height={256} />
         </motion.div>
-        <motion.p variants={item} className="p-2">
-          Somos un grupo de estudiantes apasionados por los deportes electrónicos, comprometidos con promover esta emocionante actividad en nuestra alma mater y en todo el territorio. Nos une el deseo de fomentar la competencia saludable, la colaboración, y la comunidad gamer. Creemos que los e-sports no solo son una forma de entretenimiento, sino también una plataforma para el desarrollo de habilidades, la creatividad, y el trabajo en equipo. ¡Únete a nosotros y se parte de esta increíble aventura!
-        </motion.p>
+        <motion.div
+          onViewportLeave={() => setStart(false)}
+          onViewportEnter={() => setStart(true)}
+          variants={item}
+          className="font-normal">
+          <TextGenerateEffect start={start} words="🌟 Estudiantes apasionados por los E-sports" />
+          <TextGenerateEffect start={start} words="🤝 Fomentando competencia saludable y comunidad gamer" />
+          <TextGenerateEffect start={start} words="🎯 ¡Desarrollo de habilidades, creatividad y trabajo en equipo!" />
+          <TextGenerateEffect start={start} words="📅 Únete a nuestra aventura y descubre el emocionante mundo de los E-sports." />
+        </motion.div>
         <motion.h3 variants={item} className="text-center text-2xl mt-8 font-semibold w-3/4">¿Quiénes somos?</motion.h3>
-        <motion.p variants={item} className="pt-4 p-2">
-          Estudiantes de Ingeniería de Sistemas y Computación
-        </motion.p>
         <motion.div variants={container} initial="hidden" animate={imageControls}
           className="w-fit pt-2 pb-8"><AnimatedTooltip items={integrantes} /></motion.div>
       </motion.section>

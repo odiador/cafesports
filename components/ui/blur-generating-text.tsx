@@ -8,27 +8,40 @@ export const TextGenerateEffect = ({
   className,
   filter = true,
   duration = 0.5,
+  start = false
 }: {
   words: string;
   className?: string;
   filter?: boolean;
   duration?: number;
+  start?: boolean;
 }) => {
   const [scope, animate] = useAnimate();
   const wordsArray = words.split(" ");
   useEffect(() => {
-    animate(
+    if (start)
+      animate(
+        "span",
+        {
+          opacity: 1,
+          filter: filter ? "blur(0px)" : "none",
+        },
+        {
+          duration: duration ? duration : 1,
+          delay: stagger(0.2, { startDelay: 0, ease: "easeInOut", from: "first" }),
+        }
+      );
+    else animate(
       "span",
       {
-        opacity: 1,
-        filter: filter ? "blur(0px)" : "none",
+        opacity: 0,
+        filter: filter? "blur(10px)" : "none",
       },
       {
-        duration: duration ? duration : 1,
-        delay: stagger(0.2, { startDelay: 0, ease: "easeInOut", from: "first" }),
+        duration: 0,
       }
     );
-  }, [scope.current]);
+  }, [start]);
 
   const renderWords = () => {
     return (
@@ -51,9 +64,9 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn("font-bold", className)}>
+    <div className={cn("", className)}>
       <div className="mt-4">
-          {renderWords()}
+        {renderWords()}
       </div>
     </div>
   );

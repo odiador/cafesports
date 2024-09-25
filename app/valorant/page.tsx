@@ -39,7 +39,12 @@ export default function Valorant() {
     return (
         <motion.div variants={container} initial="hidden" animate="visible" className="flex flex-col gap-4 divide-8 justify-center items-center max-w-3xl h-fit py-3 px-8 rounded-lg bg-black/30 ">
             <motion.div variants={item}>
-                <h1 className="text-2xl font-bold text-white">UQ E-Sports <strong className={`font-bold text-[${valorantInfo.color}]`}>{valorantInfo.title}</strong></h1>
+                <h1 className="text-2xl font-bold text-white flex">
+                    <h1 className="text-[#fdd868]">CafE</h1>
+                    <h1 className="text-[#66ffad]">Sports</h1>
+                    <h1 className="px-2">x</h1>
+                    <strong className={`font-bold text-[${valorantInfo.color}]`}>{valorantInfo.title}</strong>
+                </h1>
                 <p>{valorantInfo.description}</p>
             </motion.div>
             <motion.div variants={item} className="w-fit flex flex-col items-center">
@@ -49,7 +54,7 @@ export default function Valorant() {
             <motion.div variants={item} className="justify-center w-fit flex flex-col items-center gap-2">
                 <label className="font-bold">{valorantInfo.message}</label>
                 <motion.div className="size-40 relative flex-col flex items-center justify-center bg-white rounded-3xl px-4 py-8">
-                    <Image priority src={valorantInfo.qrCode} alt="" width={200} height={200} />
+                    <Image priority src={valorantInfo.qrCode} alt="Invitacion QR" width={200} height={200} />
                 </motion.div>
             </motion.div>
             <Link href={valorantInfo.url} className="bg-white mt-2 px-2 transition-transform py-1 rounded-lg hover:scale-105 cursor-pointer text-black font-semibold self-end">Inscríbete</Link>
