@@ -50,7 +50,7 @@ export const TextGenerateEffect = ({
         <div className="w-full flex flex-col">
           {wordsArray.map((word, idx) => {
             const words = word.split(" ");
-            return <div className="">
+            return <div key={'blurtext-' + idx}>
               {
                 words.map((subWord, subIdx) => (
                   <motion.span
