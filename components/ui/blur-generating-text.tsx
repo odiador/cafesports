@@ -17,7 +17,7 @@ export const TextGenerateEffect = ({
   start?: boolean;
 }) => {
   const [scope, animate] = useAnimate();
-  const wordsArray = words.split(" ");
+  
   useEffect(() => {
     if (start)
       animate(
@@ -28,14 +28,14 @@ export const TextGenerateEffect = ({
         },
         {
           duration: duration ? duration : 1,
-          delay: stagger(0.2, { startDelay: 0, ease: "easeInOut", from: "first" }),
+          delay: stagger(0.05, { startDelay: 0, ease: "easeInOut", from: "first" }),
         }
       );
     else animate(
       "span",
       {
         opacity: 0,
-        filter: filter? "blur(10px)" : "none",
+        filter: filter ? "blur(10px)" : "none",
       },
       {
         duration: 0,
@@ -43,22 +43,31 @@ export const TextGenerateEffect = ({
     );
   }, [start]);
 
+  const wordsArray = words.split("<>");
   const renderWords = () => {
     return (
-      <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx}
-              className="opacity-0"
-              style={{
-                filter: filter ? "blur(10px)" : "none",
-              }}
-            >
-              {word}{" "}
-            </motion.span>
-          );
-        })}
+      <motion.div ref={scope} className="w-full">
+        <div className="w-full flex flex-col">
+          {wordsArray.map((word, idx) => {
+            const words = word.split(" ");
+            return <div className="">
+              {
+                words.map((subWord, subIdx) => (
+                  <motion.span
+                    key={subWord + idx + subIdx}
+                    className="opacity-0"
+                    style={{
+                      opacity: 0,
+                      filter: filter ? "blur(10px)" : "none",
+                    }}
+                  >
+                    {subWord}{" "}
+                  </motion.span>
+                ))
+              }
+            </div>
+          })}
+        </div>
       </motion.div>
     );
   };

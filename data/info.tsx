@@ -39,6 +39,11 @@ const integrantes = [
     },
     {
         id: 5,
+        image: "/juanjo.png",
+        name: "Juan José Carvajal"
+    },
+    {
+        id: 6,
         image: "/cristian.png",
         name: "Cristian Sierra"
     }

@@ -47,11 +47,11 @@ export default function Home() {
             <motion.div variants={item} className="flex flex-col sm:flex-row  items-center bg-white/5 rounded-xl px-6 py-3">
               <Image priority src={valorantInfo.image} alt="" width={100} height={100} />
               <div className="flex flex-col gap-1">
-                <p className="text-lg text-left flex font-bold text-white">
+                <div className="text-lg text-left flex font-bold text-white">
                   <h1 className="text-[#fdd868]">CafE</h1>
                   <h1 className="text-[#66ffad]">Sports</h1>
                   <h1 className="px-2">x</h1>
-                  <strong className={`font-bold text-[${valorantInfo.color}]`}>{valorantInfo.title}</strong></p>
+                  <strong className={`font-bold text-[${valorantInfo.color}]`}>{valorantInfo.title}</strong></div>
                 <p>{valorantInfo.description}</p>
                 <Link href={valorantInfo.src} className="bg-white mt-2 px-2 transition-transform py-1 rounded-lg hover:scale-105 cursor-pointer text-black font-semibold self-end">Ver más</Link>
               </div>
@@ -86,10 +86,7 @@ export default function Home() {
           onViewportEnter={() => setStart(true)}
           variants={item}
           className="font-normal">
-          <TextGenerateEffect start={start} words="🌟 Estudiantes apasionados por los E-sports" />
-          <TextGenerateEffect start={start} words="🤝 Fomentando competencia saludable y comunidad gamer" />
-          <TextGenerateEffect start={start} words="🎯 ¡Desarrollo de habilidades, creatividad y trabajo en equipo!" />
-          <TextGenerateEffect start={start} words="📅 Únete a nuestra aventura y descubre el emocionante mundo de los E-sports." />
+          <TextGenerateEffect start={start} words="🚀Somos un grupo de estudiantes apasionados por los deportes electrónicos, y estamos emocionados de presentarles nuestro proyecto para promover los E-sports en la Universidad del Quindío y en todo el Eje Cafetero.<>🔝¿Te gustan los videojuegos y competir? ¿Quieres formar parte de una comunidad gamer en crecimiento?<>🎯 ¡Desarrollo de habilidades, creatividad y trabajo en equipo!<>📅 Únete a nuestra aventura y descubre el emocionante mundo de los E-sports." />
         </motion.div>
         <motion.h3 variants={item} className="text-center text-2xl mt-8 font-semibold w-3/4">¿Quiénes somos?</motion.h3>
         <motion.div variants={container} initial="hidden" animate={imageControls}
