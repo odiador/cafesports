@@ -1,5 +1,6 @@
 "use client";
 import { container, item } from "@/components/consts";
+import Contactanos from "@/components/gmail";
 import { TextGenerateEffect } from "@/components/ui/blur-generating-text";
 import { AnimatedTooltip } from "@/components/ui/image-frame";
 import { integrantes, valorantInfo } from "@/data/info";
@@ -36,28 +37,31 @@ export default function Home() {
     <main className="p-2 flex flex-col items-center max-w-3xl">
       <header className="h-[calc(100vh-160px)] flex flex-col gap-1 items-center mb-32">
         <motion.div variants={item} className="text-center text-4xl font-bold flex" >
-          <h1 className="text-[#fdd868]">CafE</h1>
-          <h1 className="text-[#66ffad]">Sports</h1>
+          <h1 className="text-[#fdd868] font-extrabold">CafE<strong className="text-[#66ffad] font-extrabold">Sports</strong></h1>
         </motion.div>
         <motion.p variants={item} initial="hidden" animate="visible" className="w-full text-left">
           Nuestro próximo evento:
         </motion.p>
-        <div className="grow">
-          <motion.div variants={container} initial="hidden" animate="visible" className="flex h-fit flex-col gap-2 items-center justify-center">
-            <motion.div variants={item} className="flex flex-col sm:flex-row  items-center bg-white/5 rounded-xl px-6 py-3">
-              <Image priority src={valorantInfo.image} alt="" width={100} height={100} />
-              <div className="flex flex-col gap-1">
-                <div className="text-lg text-left flex font-bold text-white">
-                  <h1 className="text-[#fdd868]">CafE</h1>
-                  <h1 className="text-[#66ffad]">Sports</h1>
-                  <h1 className="px-2">x</h1>
-                  <strong className={`font-bold text-[${valorantInfo.color}]`}>{valorantInfo.title}</strong></div>
-                <p>{valorantInfo.description}</p>
-                <Link href={valorantInfo.src} className="bg-white mt-2 px-2 transition-transform py-1 rounded-lg hover:scale-105 cursor-pointer text-black font-semibold self-end">Ver más</Link>
+        <motion.div variants={container} initial="hidden" animate="visible" className="flex h-fit flex-col gap-2 items-center justify-center">
+          <motion.div variants={item} className="flex flex-col sm:flex-row  items-center bg-white/5 rounded-xl px-6 py-3">
+            <Image priority src={valorantInfo.image} alt="" width={100} height={100} />
+            <div className="flex flex-col gap-1">
+              <div className="text-lg text-left flex font-bold text-white">
+                <h1 className="text-[#fdd868]">CafE</h1>
+                <h1 className="text-[#66ffad]">Sports</h1>
+                <h1 className="px-2">x</h1>
+                <strong className={`font-bold text-[${valorantInfo.color}]`}>{valorantInfo.title}</strong></div>
+              <p>{valorantInfo.description}</p>
+              <div className="flex justify-end h-fit items-center gap-2 mt-2">
+                <Contactanos />
+                <Link href={valorantInfo.src} className="bg-white px-3 transition-transform py-1.5 rounded-lg hover:scale-105 cursor-pointer text-black font-semibold self-end">Ver más</Link>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
-        </div>
+        </motion.div>
+        <motion.div variants={container} initial="hidden" animate="visible" className="flex h-fit w-fit flex-col gap-2 items-start justify-start grow">
+
+        </motion.div>
         <motion.div variants={{
           hidden: { opacity: 0, scale: 0, transition: { duration: 0.2 } },
           visible: {
