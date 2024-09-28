@@ -52,7 +52,7 @@ export default function Home() {
                 <h1 className="px-2">x</h1>
                 <strong className={`font-bold text-[${valorantInfo.color}]`}>{valorantInfo.title}</strong></div>
               <p>{valorantInfo.description}</p>
-              <div className="flex justify-end h-fit items-center gap-2 mt-2">
+              <div className="flex justify-between h-fit items-center gap-2 mt-2">
                 <Contactanos />
                 <Link href={valorantInfo.src} className="bg-white px-3 transition-transform py-1.5 rounded-lg hover:scale-105 cursor-pointer text-black font-semibold self-end">Ver más</Link>
               </div>
