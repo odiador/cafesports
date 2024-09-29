@@ -37,22 +37,22 @@ export default function Home() {
     <main className="p-2 flex flex-col items-center max-w-3xl">
       <header className="h-[calc(100vh-160px)] flex flex-col gap-1 items-center mb-32">
         <motion.div variants={item} className="text-center text-4xl font-bold flex" >
-          <h1 className="text-[#fdd868] font-extrabold">CafE<strong className="text-[#66ffad] font-extrabold">Sports</strong></h1>
+          <h1 className="from-[#fdd868] via-30% via-[#fdd868] to-[#66ffad] bg-gradient-to-r bg-clip-text text-transparent font-extrabold">CafESports</h1>
         </motion.div>
         <motion.p variants={item} initial="hidden" animate="visible" className="w-full text-left">
           Nuestro próximo evento:
         </motion.p>
         <motion.div variants={container} initial="hidden" animate="visible" className="flex h-fit flex-col gap-2 items-center justify-center">
-          <motion.div variants={item} className="flex flex-col sm:flex-row  items-center bg-white/5 rounded-xl px-6 py-3">
+          <motion.div variants={item} className="flex flex-col gap-2 sm:flex-row  items-center bg-white/5 rounded-xl px-6 py-3">
             <Image priority src={valorantInfo.image} alt="" width={100} height={100} />
             <div className="flex flex-col gap-1">
-              <div className="text-lg text-left flex font-bold text-white">
-                <h1 className="text-[#fdd868]">CafE</h1>
-                <h1 className="text-[#66ffad]">Sports</h1>
-                <h1 className="px-2">x</h1>
-                <strong className={`font-bold text-[${valorantInfo.color}]`}>{valorantInfo.title}</strong></div>
+              <p className="text-2xl font-extrabold text-white">
+                <strong className="from-[#fdd868] via-30% via-[#fdd868] to-[#66ffad] bg-gradient-to-r bg-clip-text font-extrabold text-transparent">CafESports</strong>
+                {" x "}
+                <strong className={`font-extrabold bg-clip-text text-transparent to-[#f45865] via-50% bg-[#f45865] from-[#ff9e9e]`}>{valorantInfo.title}</strong>
+              </p>
               <p>{valorantInfo.description}</p>
-              <div className="flex justify-between h-fit items-center gap-2 mt-2">
+              <div className="flex sm:justify-between justify-end sm:flex-row flex-col  h-fit items-end sm:items-center gap-2 mt-2">
                 <Contactanos />
                 <Link href={valorantInfo.src} className="bg-white px-3 transition-transform py-1.5 rounded-lg hover:scale-105 cursor-pointer text-black font-semibold self-end">Ver más</Link>
               </div>

@@ -14,10 +14,9 @@ export default function Valorant() {
             const sec = n % 10;
             return (
                 <div className={`text-white bg-white/5 text-3xl ${round} font-medium w-16 h-16 sm:w-20 sm:h-20 pt-2 px-1 flex flex-col items-center justify-center`}>
-                    <div className="flex gap-1 justify-center bg-black/0 rounded-lg grow items-center" suppressHydrationWarning>
-                        <span suppressHydrationWarning>{`${fst}`}</span>
-                        <span suppressHydrationWarning>{`${sec}`}</span>
-                    </div>
+                    <p className="flex text tracking-widest gap-1 justify-center bg-black/0 rounded-lg grow items-center" suppressHydrationWarning>
+                        {`${fst}${sec}`}
+                    </p>
                     <div className="text-xs font-semibold text-center pb-1">{type}</div>
                 </div>)
         }
@@ -37,14 +36,13 @@ export default function Valorant() {
 
     };
     return (
-        <motion.div variants={container} initial="hidden" animate="visible" className="flex flex-col gap-4 divide-8 justify-center items-center max-w-3xl h-fit py-3 px-8 rounded-lg bg-black/30 ">
+        <motion.div variants={container} initial="hidden" animate="visible" className="flex flex-col gap-4 divide-8 justify-center items-center max-w-3xl h-fit py-8 px-8 rounded-lg bg-black/30 ">
             <motion.div variants={item}>
-                <h1 className="text-2xl font-bold text-white flex">
-                    <h1 className="text-[#fdd868]">CafE</h1>
-                    <h1 className="text-[#66ffad]">Sports</h1>
-                    <h1 className="px-2">x</h1>
-                    <strong className={`font-bold text-[${valorantInfo.color}]`}>{valorantInfo.title}</strong>
-                </h1>
+                <p className="text-2xl font-extrabold text-white">
+                    <strong className="from-[#fdd868] via-30% via-[#fdd868] to-[#66ffad] bg-gradient-to-r bg-clip-text font-extrabold text-transparent">CafESports</strong>
+                    {" x "}
+                    <strong className={`font-extrabold bg-clip-text text-transparent to-[#f45865] via-50% bg-[#f45865] from-[#ff9e9e]`}>{valorantInfo.title}</strong>
+                </p>
                 <p>{valorantInfo.description}</p>
             </motion.div>
             <motion.div variants={item} className="w-fit flex flex-col items-center">

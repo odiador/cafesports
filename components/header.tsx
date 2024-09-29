@@ -7,9 +7,10 @@ export default function Header() {
         <div className="grow">
             <Link href={"/"} className="font-bold group bg-opacity-15 hover:bg-opacity-5 text-white transition-colors flex items-center bg-white rounded-full py-1 w-fit px-3 gap-1">
                 <Image className="rounded-full" src={"/logot.png"} alt="Logo" width={32} height={32} />
-                <div className="flex"><h1 className="group-hover:text-[#fdd868] transition-colors">CafE</h1>
-                <h1 className="group-hover:text-[#66ffad] transition-colors">Sports</h1></div>
-                </Link>
+                <div className="flex">
+                    <h1 className="group-hover:from-[#fdd868] group-hover:via-30% group-hover:via-[#fdd868] group-hover:to-[#66ffad] group-hover:bg-gradient-to-r bg-clip-text group-hover:text-transparent bg-white duration-300 font-extrabold transition-colors">CafESports</h1>
+                </div>
+            </Link>
         </div>
         <Link href={"#"}>
             <IconBrandTwitch className="text-white hover:text-[#f45865] hover:scale-110 transition-all" />

@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
            className={`${geistSans.variable} ${geistMono.variable} antialiased h-fit w-full font-[family-name:var(--font-geist-sans)] overflow-x-hidden`}
       >
-        <div className="fixed -z-50 bg-gradient-radial from-[#22634f] to-[#0a0a0a] pointer-events-none left-0 top-0 w-screen h-screen"></div>
+        <div className="fixed -z-50 bg-gradient-radial from-[#1b4e3f] to-[#0a0a0a] pointer-events-none left-0 top-0 w-screen h-screen"></div>
         <Header />
         <div className="mb-6 p-2 overflow-x-hidden overflow-y-hidden flex-col flex gap-2 items-center justify-top">
           {children}
