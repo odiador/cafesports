@@ -46,6 +46,11 @@ const integrantes = [
         id: 6,
         image: "/cristian.png",
         name: "Cristian Sierra"
+    },
+    {
+        id: 7,
+        image: "/jhony.png",
+        name: "Jhony Alexander Perea"
     }
 ]
 
