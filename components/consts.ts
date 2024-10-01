@@ -1,3 +1,12 @@
+const containerImage = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            delayChildren: .25,
+        }
+    }
+};
 
 const container = {
     hidden: { opacity: 0, scale: 1 },
@@ -17,4 +26,4 @@ const item = {
         opacity: 1
     }
 };
-export { container, item };
+export { container, item, containerImage };

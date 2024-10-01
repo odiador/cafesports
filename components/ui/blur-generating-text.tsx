@@ -7,7 +7,7 @@ export const TextGenerateEffect = ({
   words,
   className,
   filter = true,
-  duration = 0.5,
+  duration = 0.25,
   start = false
 }: {
   words: string;
@@ -28,7 +28,7 @@ export const TextGenerateEffect = ({
         },
         {
           duration: duration ? duration : 1,
-          delay: stagger(0.05, { startDelay: 0, ease: "easeInOut", from: "first" }),
+          delay: stagger(0.01, { startDelay: 0, ease: "easeInOut", from: "first" }),
         }
       );
     else animate(

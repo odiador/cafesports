@@ -1,5 +1,5 @@
 "use client";
-import { container, item } from "@/components/consts";
+import { container, containerImage, item } from "@/components/consts";
 import Contactanos from "@/components/gmail";
 import { TextGenerateEffect } from "@/components/ui/blur-generating-text";
 import { AnimatedTooltip } from "@/components/ui/image-frame";
@@ -72,29 +72,28 @@ export default function Home() {
         </motion.div>
       </header>
       <motion.section
-        onViewportEnter={() => imageControls.start('visible')}
-        onViewportLeave={() => imageControls.set('hidden')}
         id="info"
+        onViewportLeave={() => setStart(false)}
+        onViewportEnter={() => setStart(true)}
         whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: 50 }}
-        animate="visible"
-        variants={container}
+        initial={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="bg-white/5 rounded-lg p-2 flex flex-col justify-center items-center">
+        className="bg-white/5 rounded-lg mt-16 py-16 px-8 flex flex-col justify-center items-center">
         <motion.h3 variants={item} className="text-center text-4xl font-bold w-3/4 text-wrap">¡Bienvenidos a nuestro equipo de E-Sports!</motion.h3>
         <motion.div variants={item} className="mt-4 size-fit bg-white rounded-xl overflow-hidden">
           <Image src={"/logot.png"} alt="Logo Transparent" className="size-64" width={256} height={256} />
         </motion.div>
         <motion.div
-          onViewportLeave={() => setStart(false)}
-          onViewportEnter={() => setStart(true)}
           variants={item}
           className="font-normal">
           <TextGenerateEffect start={start} words="🚀Somos un grupo de estudiantes apasionados por los deportes electrónicos, y estamos emocionados de presentarles nuestro proyecto para promover los E-sports en la Universidad del Quindío y en todo el Eje Cafetero.<>🔝¿Te gustan los videojuegos y competir? ¿Quieres formar parte de una comunidad gamer en crecimiento?<>🎯 ¡Desarrollo de habilidades, creatividad y trabajo en equipo!<>📅 Únete a nuestra aventura y descubre el emocionante mundo de los E-sports." />
         </motion.div>
         <motion.h3 variants={item} className="text-center text-2xl mt-8 font-semibold w-3/4">¿Quiénes somos?</motion.h3>
-        <motion.div variants={container} initial="hidden" animate={imageControls}
-          className="w-fit pt-2 pb-8"><AnimatedTooltip items={integrantes} /></motion.div>
+        <motion.div
+          onViewportEnter={() => imageControls.start('visible')}
+          onViewportLeave={() => imageControls.set('hidden')}
+          variants={containerImage} initial="hidden" animate={imageControls}
+          className="w-fit px-4 pt-2 pb-8"><AnimatedTooltip items={integrantes} /></motion.div>
       </motion.section>
     </main>
   );

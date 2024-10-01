@@ -38,7 +38,12 @@ export const AnimatedTooltip = ({
     <div className="flex flex-wrap justify-center">
       {items.map((item) => (
         <motion.div
-          variants={variant}
+          variants={{
+            hidden: {  scale: 0 },
+            visible: {
+              scale: 1
+            }
+          }}
           className="-mr-4  relative group"
           key={item.name}
           onMouseEnter={() => setHoveredIndex(item.id)}
