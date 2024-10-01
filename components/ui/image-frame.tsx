@@ -32,7 +32,6 @@ export const AnimatedTooltip = ({
     useTransform(x, [-100, 100], [-50, 50]),
     springConfig
   );
-  const variant = item;
 
   return (
     <div className="flex flex-wrap justify-center">
