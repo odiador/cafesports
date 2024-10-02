@@ -7,7 +7,7 @@ const valorantInfo = {
     qrCode: "/qr.png",
     message: "Inscribe a tu equipo ahora",
     url: "https://forms.gle/FQLs9SMciCrvDeTj9",
-    startDate: Date.UTC(2024, 9, 7, 5, 0, 0, 0),
+    startDate: Date.UTC(2024, 9, 5, 5, 0, 0, 0),
     aclarations: ["* solo Ingeniería de Sistemas y Computación *"]
 }
 

@@ -46,7 +46,7 @@ export default function Valorant() {
                 <p>{valorantInfo.description}</p>
             </motion.div>
             <motion.div variants={item} className="w-fit flex flex-col items-center">
-                <label className="font-medium text-center">Faltan:</label>
+                <label className="font-medium text-center">Te puedes inscribir hasta:</label>
                 <Countdown date={valorantInfo.startDate} renderer={renderer} />
             </motion.div>
             <motion.div variants={item} className="justify-center w-fit flex flex-col items-center gap-2">
