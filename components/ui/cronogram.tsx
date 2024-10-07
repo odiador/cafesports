@@ -1,6 +1,7 @@
 const Cronograma = () => {
     return (<div className="mt-8">
         <CalendarItem
+            key={"deathmatch"}
             date="07 oct"
             description="Es un deathmatch de eliminación directa en el que 10 jugadores se van a enfrentar, los primeros 5 formarán un equipo y los últimos van a ser eliminados"
             judges={["- Juan David Lopez", "- Cristian Sierra"]}
