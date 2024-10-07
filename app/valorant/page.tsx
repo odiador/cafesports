@@ -16,7 +16,6 @@ export default function Valorant() {
                     <strong className={`font-extrabold bg-clip-text text-transparent to-[#f45865] via-50% bg-[#f45865] from-[#ff9e9e]`}>{valorantInfo.title}</strong>
                 </p>
                 <p>{valorantInfo.description}</p>
-                <Cronograma/>
                 <div className="flex mt-4 gap-2 justify-between flex-col sm:flex-row items-center w-full">
                     <Link className="flex gap-1 items-center px-4 bg-black/50 py-1 group hover:scale-110 transition-all rounded-lg w-fit" href={"https://www.twitch.tv/cafesportsq"}>
                         <IconBrandTwitch className="text-[#9146ff] size-10 transition-all" />
@@ -31,6 +30,7 @@ export default function Valorant() {
                         <h1 className="text-[#53fd18] font-semibold">{"/cafesports"}</h1>
                     </Link>
                 </div>
+                <Cronograma />
             </motion.div>
         </motion.div>)
 }
