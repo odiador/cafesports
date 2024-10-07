@@ -1,4 +1,4 @@
-import { IconBrandInstagram } from "@tabler/icons-react";
+import { IconBrandInstagram, IconBrandKick, IconBrandTwitch } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,8 +12,14 @@ export default function Header() {
                 </div>
             </Link>
         </div>
+        <Link href={"https://www.twitch.tv/cafesportsq"}>
+            <IconBrandTwitch className="text-[#9146ff] hover:text-[#c299ff] hover:scale-125 transition-all" />
+        </Link>
         <Link href={"https://www.instagram.com/cafesportq/"}>
-            <IconBrandInstagram className="text-white hover:text-[#f45865] hover:scale-110 transition-all" />
+            <IconBrandInstagram className="text-white hover:scale-125 transition-all" />
+        </Link>
+        <Link href={"https://kick.com/cafesports"}>
+            <IconBrandKick className="text-[#53fd18] hover:scale-125 transition-all" />
         </Link>
     </div>;
 }

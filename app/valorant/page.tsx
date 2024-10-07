@@ -1,9 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Countdown from "react-countdown";
 import { container, item } from "@/components/consts";
 import { valorantInfo } from "@/data/info";
+import { IconBrandTwitch, IconBrandKick, IconBrandInstagram } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Valorant() {
@@ -44,17 +43,20 @@ export default function Valorant() {
                     <strong className={`font-extrabold bg-clip-text text-transparent to-[#f45865] via-50% bg-[#f45865] from-[#ff9e9e]`}>{valorantInfo.title}</strong>
                 </p>
                 <p>{valorantInfo.description}</p>
+                <div className="flex mt-4 justify-between items-center w-full">
+                    <Link className="flex gap-1 items-center px-4 bg-black/50 py-1 group hover:scale-110 transition-all rounded-lg w-fit" href={"https://www.twitch.tv/cafesportsq"}>
+                        <IconBrandTwitch className="text-[#9146ff] size-10 transition-all" />
+                        <h1 className="text-[#9146ff] font-semibold">{"/cafesportsq"}</h1>
+                    </Link>
+                    <Link className="flex gap-1 items-center px-4 bg-black/50 py-1 group hover:scale-110 transition-all rounded-lg w-fit" href={"https://www.instagram.com/cafesportq/"}>
+                        <IconBrandInstagram className="text-white size-10 transition-all" />
+                        <h1 className="font-semibold">{"/cafesportq"}</h1>
+                    </Link>
+                    <Link className="flex gap-1 items-center px-4 bg-black/50 py-1 group hover:scale-110 transition-all rounded-lg w-fit" href={"https://kick.com/cafesports"}>
+                        <IconBrandKick className="text-[#53fd18] size-10 transition-all" />
+                        <h1 className="text-[#53fd18] font-semibold">{"/cafesports"}</h1>
+                    </Link>
+                </div>
             </motion.div>
-            <motion.div variants={item} className="w-fit flex flex-col items-center">
-                <label className="font-medium text-center">Te puedes inscribir hasta:</label>
-                <Countdown date={valorantInfo.startDate} renderer={renderer} />
-            </motion.div>
-            <motion.div variants={item} className="justify-center w-fit flex flex-col items-center gap-2">
-                <label className="font-bold">{valorantInfo.message}</label>
-                <motion.div className="size-40 relative flex-col flex items-center justify-center bg-white rounded-3xl px-4 py-8">
-                    <Image priority src={valorantInfo.qrCode} alt="Invitacion QR" width={200} height={200} />
-                </motion.div>
-            </motion.div>
-            <Link href={valorantInfo.url} className="bg-white mt-2 px-2 transition-transform py-1 rounded-lg hover:scale-105 cursor-pointer text-black font-semibold self-end">Inscríbete</Link>
         </motion.div>)
 }

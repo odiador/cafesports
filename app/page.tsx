@@ -1,6 +1,5 @@
 "use client";
 import { container, containerImage, item } from "@/components/consts";
-import Contactanos from "@/components/gmail";
 import { TextGenerateEffect } from "@/components/ui/blur-generating-text";
 import { AnimatedTooltip } from "@/components/ui/image-frame";
 import { integrantes, valorantInfo } from "@/data/info";
@@ -52,8 +51,7 @@ export default function Home() {
                 <strong className={`font-extrabold bg-clip-text text-transparent to-[#f45865] via-50% bg-[#f45865] from-[#ff9e9e]`}>{valorantInfo.title}</strong>
               </p>
               <p>{valorantInfo.description}</p>
-              <div className="flex sm:justify-between justify-end sm:flex-row flex-col  h-fit items-end sm:items-center gap-2 mt-2">
-                <Contactanos />
+              <div className="flex sm:justify-end justify-end sm:flex-row flex-col  h-fit items-end sm:items-center gap-2 mt-2">
                 <Link href={valorantInfo.src} className="bg-white px-3 transition-transform py-1.5 rounded-lg hover:scale-105 cursor-pointer text-black font-semibold self-end">Ver más</Link>
               </div>
             </div>

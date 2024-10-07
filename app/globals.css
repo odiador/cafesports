@@ -27,7 +27,6 @@ html::-webkit-scrollbar-button {
 }
 html::-webkit-scrollbar {
   width: 12px;
-  background-color: #0a0a0a;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -43,5 +42,5 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb:hover {
-  background-color: #666;
+  background-color: #1f6440;
 }

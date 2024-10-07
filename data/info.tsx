@@ -3,10 +3,8 @@ const valorantInfo = {
     src: "/valorant",
     color: "#f45865",
     image: "/logot.png",
-    description: "Junta a tu equipo para participar en la primera competencia de Valorant en la Universidad del Quindío, juega en la semana universitaria de la Universidad del Quindío y tú y tu equipo podrán ser los ganadores.",
+    description: "¡A las 11:00 am empezamos! Mantente atento para ver novedades de nuestro torneo, pronto sabrás nuestro cronograma",
     qrCode: "/qr.png",
-    message: "Inscribe a tu equipo ahora",
-    url: "https://forms.gle/FQLs9SMciCrvDeTj9",
     startDate: Date.UTC(2024, 9, 5, 5, 0, 0, 0),
     aclarations: ["* solo Ingeniería de Sistemas y Computación *"]
 }
