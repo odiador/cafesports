@@ -14,7 +14,7 @@ const Cronograma = () => {
                     name: "Todos contra Todos",
                     time: "11:00 am - 2:00 pm",
                     ganadores: ["- Miguel Montenegro", "- Sebastián Loaiza", "- Juan Esteban Mosquera", "- Juan Camilo Albarán", "- Nykol Xiomara Ramírez"],
-                    details: "Los 5 mejores forman un equipo entre ellos"
+                    details: "Estos jugadores forman un equipo entre ellos"
                 },
                 {
                     key: "round1",
@@ -23,7 +23,8 @@ const Cronograma = () => {
                     judges: ["- Juan David Lopez"],
                     name: "Ronda 1",
                     time: "4:00 pm - 6:00 pm",
-                    played: false,
+                    ganadores: [""],
+                    details: "#9 Hollow"
                 }
             ]
         },
@@ -75,8 +76,8 @@ const CalendarItem = ({ date, nameDate, events }: {
                             {e.judges.map(juez => {
                                 return <h1 key={juez + e.key} className="text-sm font-normal">{juez}</h1>
                             })}
+                            {e.ganadores && e.ganadores.length != 0 && <h1 className="mt-4 text-xl text-[#8cd6bc] font-bold">{"Equipo Ganador"}</h1>}
                             {e.details && <h1 className="font-bold text-md my-2">{`${e.details}`}</h1>}
-                            {e.ganadores && e.ganadores.length != 0 && <h1 className="mt-4 text-xl text-[#8cd6bc] font-bold">{"Ganadores"}</h1>}
                             {e.ganadores && e.ganadores.map(ganador => {
                                 return <h1 key={ganador + e.key} className="text-sm font-normal">{ganador}</h1>
                             })}
