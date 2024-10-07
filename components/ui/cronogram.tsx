@@ -23,7 +23,7 @@ const CalendarItem = ({ date, nameDate, description, judges, name, time }: { dat
             <h1 className="text-sm font-normal">{description}</h1>
             <h1 className="mt-4 text-md font-bold">{"Jueces encargados"}</h1>
             {judges.map(juez => {
-                return <h1 className="text-sm font-normal">{juez}</h1>
+                return <h1 key={juez} className="text-sm font-normal">{juez}</h1>
             })}
         </div>
     </div>;
