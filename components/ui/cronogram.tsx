@@ -1,5 +1,5 @@
 const Cronograma = () => {
-    return (<div className="mt-8">
+    return (<div className="mt-8" key={"cronogram"}>
         <CalendarItem
             key={"deathmatch"}
             date="07 oct"
