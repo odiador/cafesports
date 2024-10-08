@@ -19,12 +19,36 @@ const Cronograma = () => {
                 {
                     key: "round1",
                     description: "La ronda 1 es una partida competitiva normal de Valorant.",
-                    vs: "#5 Hilen vs #9 Hollow",
+                    vs: "Hilen vs Hollow",
                     judges: ["- Juan David Lopez"],
                     name: "Ronda 1",
                     time: "4:00 pm - 6:00 pm",
                     ganadores: [""],
-                    details: "#9 Hollow"
+                    details: "Hollow"
+                }
+            ]
+        },
+        {
+            date: "08 oct",
+            nameDate: "martes",
+            events: [
+                {
+                    key: "round2",
+                    description: "La ronda 2 es una partida competitiva normal de Valorant.",
+                    vs: "Print(\"null\") vs No Name",
+                    judges: ["- Juan David Lopez", "- Eyner Andrés Diaz"],
+                    name: "Ronda 2",
+                    time: "11:00 am - 2:00 pm",
+                    details: "No Name",
+                    ganadores: [""],
+                },
+                {
+                    key: "round3",
+                    description: "La ronda 3 es una partida competitiva normal de Valorant.",
+                    vs: "The Last One vs Requiem",
+                    judges: ["- Juan David Lopez", "- Valeria Florez"],
+                    name: "Ronda 3",
+                    time: "4:00 pm - 6:00 pm",
                 }
             ]
         },
