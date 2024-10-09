@@ -7,9 +7,9 @@ import { KickEmbed, TwitchEmbed } from "./ui/Embed";
 import { useState } from "react";
 
 const Embeds = () => {
-    
-  const [showKick, setShowKick] = useState(false);
-  const [showTwitch, setShowTwitch] = useState(false);
+
+    const [showKick, setShowKick] = useState(false);
+    const [showTwitch, setShowTwitch] = useState(false);
     return (
         <>
             <div className="font-operator flex items-center gap-1">
@@ -23,7 +23,7 @@ const Embeds = () => {
                 <div className="flex gap-4">
                     <button onClick={() => setShowKick(k => !k)}
                         className="bg-white w-fit text-black transition-all font-semibold rounded-lg px-4 py-2 hover:bg-white/85 flex gap-1 hover:scale-110">Ver aquí</button>
-                    <Link href="https://kick.com/cafesports" className="bg-[#53fd18] w-fit text-black transition-all font-semibold rounded-lg px-4 py-2 flex gap-1 hover:scale-110"><IconBrandKick /></Link>
+                    <Link href="https://kick.com/cafesports" className="bg-[#53fd18] w-fit text-black transition-all font-semibold rounded-lg px-4 py-2 flex gap-1 hover:scale-110">o en <IconBrandKick /></Link>
                 </div>
                 {showKick && <KickEmbed />}
             </div>
@@ -32,7 +32,7 @@ const Embeds = () => {
                 <div className="flex gap-4">
                     <button onClick={() => setShowTwitch(k => !k)}
                         className="bg-white w-fit text-black transition-all font-semibold rounded-lg px-4 py-2 hover:bg-white/85 flex gap-1 hover:scale-110">Ver aquí</button>
-                    <Link href="https://twitch.tv/cafesportsq" className="bg-[#9146ff] w-fit text-white transition-all font-semibold rounded-lg px-4 py-2 flex gap-1 hover:scale-110"><IconBrandTwitch /></Link>
+                    <Link href="https://twitch.tv/cafesportsq" className="bg-[#9146ff] w-fit text-white transition-all font-semibold rounded-lg px-4 py-2 flex gap-1 hover:scale-110">o en <IconBrandTwitch /></Link>
                 </div>
                 {showTwitch && <TwitchEmbed />}
             </div>

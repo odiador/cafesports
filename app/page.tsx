@@ -36,9 +36,9 @@ export default function Home() {
             {" x "}
             <strong className={`font-extrabold bg-clip-text text-transparent to-[#f45865] via-50% bg-[#f45865] from-[#ff9e9e]`}>{valorantInfo.title}</strong>
           </p>
-          
+
         </motion.div>
-        {live&& <Embeds/>}
+        {live && <Embeds />}
         <h1 className="w-full mt-8 text-center text-2xl font-bold "
           onCanPlay={() => setLive(true)}
         >Cronograma de Torneo</h1>
