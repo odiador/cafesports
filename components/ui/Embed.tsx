@@ -22,7 +22,7 @@ const TwitchEmbed = () => {
             <iframe
                 className="size-full"
                 onLoad={() => setShow(false)}
-                src="https://player.twitch.tv/?channel=cafesportsq&parent=localhost"
+                src="https://player.twitch.tv/?channel=cafesportsq&parent=cafesports.vercel.app"
                 allowFullScreen={true}
             />
             <div className="absolute top-1/2 left-1/2 animate-spin z-[1]" style={{ display: show ? "block" : "none" }}><IconLoader /></div>
