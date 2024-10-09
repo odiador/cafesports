@@ -11,7 +11,7 @@ const geistSans = localFont({
 });
 
 const pixelOperator = localFont({
-  src: "fonts/PixelOperator8-bold.ttf",
+  src: "../public/PixelOperator8-Bold.ttf",
   variable: "--font-pixel-operator",
 });
 
