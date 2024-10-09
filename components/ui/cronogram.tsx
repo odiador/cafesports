@@ -48,6 +48,32 @@ const Cronograma = () => {
                     vs: "The Last One vs Requiem",
                     judges: ["- Juan David Lopez", "- Valeria Florez"],
                     name: "Ronda 3",
+                    ganadores: [""],
+                    details: "The Last One",
+                    time: "4:00 pm - 6:00 pm",
+                }
+            ]
+        },
+        {
+            date: "09 oct",
+            nameDate: "miércoles",
+            events: [
+                {
+                    key: "round4",
+                    description: "La ronda 4 es una partida competitiva normal de Valorant.",
+                    vs: "Codebreakers vs 5m",
+                    judges: ["- Eyner Andrés Diaz"],
+                    name: "Ronda 4",
+                    ganadores: [""],
+                    details: "Codebreakers",
+                    time: "11:00 am - 2:00 pm",
+                },
+                {
+                    key: "semi1",
+                    description: "La semifinal 1 es una partida competitiva normal de Valorant.",
+                    vs: "Hollow vs The Last One",
+                    judges: ["- Juan David Lopez", "- Valeria Florez"],
+                    name: "Semifinal 1",
                     time: "4:00 pm - 6:00 pm",
                 }
             ]
@@ -84,7 +110,7 @@ const CalendarItem = ({ date, nameDate, events }: {
                 <div className="w-1 h-full flex items-center justify-center bg-gradient-to-b from-[#8cd6bc] to-transparent relative  after:content-[''] after:absolute after:-left-1 after:-top-2 after:size-3 after:bg-[#8cd6bc] after:rounded-full" />
             </div>
             <div className="grow gap-2 flex flex-col pb-8 pl-4 relative">
-                <h1 className="relative -top-3.5 font-medium">{date} <strong className="font-medium text-white/50">{nameDate}</strong></h1>
+                <h1 className="relative -top-3.5 font-medium  font-operator text-[#8cd6bc]">{date} <strong className="font-medium text-white">{nameDate}</strong></h1>
                 <div className="flex flex-col gap-4">
                     {events.map(e => {
                         return (<div className="w-full bg-white/5 hover:bg-white/10 duration-700 rounded-lg border-2 border-white/15 hover:border-white/30 transition-colors px-4 py-2"

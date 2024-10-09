@@ -15,6 +15,9 @@ const config: Config = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
+      fontFamily: {
+        "operator": "var(--font-pixel-operator)",
       }
     },
   },

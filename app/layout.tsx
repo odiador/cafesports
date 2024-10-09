@@ -9,6 +9,18 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
+const pixelOperator = localFont({
+  src: [
+    {
+      path: "./fonts/PixelOperator8-bold.ttf",
+      weight: "700",
+      style: "bold",
+    }
+  ],
+  variable: "--font-pixel-operator",
+});
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -29,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-           className={`${geistSans.variable} ${geistMono.variable} antialiased h-fit w-full font-[family-name:var(--font-geist-sans)] overflow-x-hidden`}
+           className={`${geistSans.variable} ${geistMono.variable} ${pixelOperator.variable} antialiased h-fit w-full font-[family-name:var(--font-geist-sans)] overflow-x-hidden`}
       >
         <div className="fixed -z-50 bg-gradient-radial from-[#1b4e3f] to-[#0a0a0a] pointer-events-none left-0 top-0 w-screen h-screen"></div>
         <Header />

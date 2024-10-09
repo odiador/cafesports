@@ -1,5 +1,6 @@
 "use client";
 import { containerImage, item } from "@/components/consts";
+import Embeds from "@/components/Embeds";
 import { TextGenerateEffect } from "@/components/ui/blur-generating-text";
 import Cronograma from "@/components/ui/cronogram";
 import { AnimatedTooltip } from "@/components/ui/image-frame";
@@ -21,21 +22,26 @@ export default function Home() {
     }
   })
   const [start, setStart] = useState(false);
+  const [live, setLive] = useState(true);
   return (
     <main className="p-2 flex flex-col items-center max-w-3xl">
       <header className="h-fit flex flex-col gap-1 items-center mb-32">
         <motion.div variants={item} className="text-center text-4xl font-bold flex" >
           <h1 className="from-[#fdd868] via-30% via-[#fdd868] to-[#66ffad] bg-gradient-to-r bg-clip-text text-transparent font-extrabold">CafESports</h1>
         </motion.div>
-        <motion.div variants={item} initial="hidden" animate="visible" className="w-full mt-8 text-center text-xl font-bold">
+        <motion.div variants={item} initial="hidden" animate="visible" className="w-full mt-8 text-center text-xl">
 
           <p className="text-3xl font-extrabold text-white">
             <strong className="from-[#fdd868] via-30% via-[#fdd868] to-[#66ffad] bg-gradient-to-r bg-clip-text font-extrabold text-transparent">CafESports</strong>
             {" x "}
             <strong className={`font-extrabold bg-clip-text text-transparent to-[#f45865] via-50% bg-[#f45865] from-[#ff9e9e]`}>{valorantInfo.title}</strong>
           </p>
-          Cronograma de Torneo
+          
         </motion.div>
+        {live&& <Embeds/>}
+        <h1 className="w-full mt-8 text-center text-2xl font-bold "
+          onCanPlay={() => setLive(true)}
+        >Cronograma de Torneo</h1>
         <Cronograma />
         <motion.div variants={item} className="flex flex-col gap-2 items-center  w-full bg-white/5 rounded-xl px-6 py-3">
           <h1 className="text-xl font-bold">{"Nuestras redes:"}</h1>
