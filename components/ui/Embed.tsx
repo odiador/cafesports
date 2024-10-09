@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 const TwitchEmbed = () => {
-    let ref = useRef<HTMLDivElement | null>(null);
+    const ref = useRef<HTMLDivElement | null>(null);
     const [height, setHeight] = useState<number>();
     const [show, setShow] = useState<boolean>(true);
     useEffect(() => {
@@ -31,7 +31,7 @@ const TwitchEmbed = () => {
 };
 
 const KickEmbed = () => {
-    let ref = useRef<HTMLDivElement | null>(null);
+    const ref = useRef<HTMLDivElement | null>(null);
     const [show, setShow] = useState<boolean>(true);
     const [height, setHeight] = useState<number>();
     useEffect(() => {
