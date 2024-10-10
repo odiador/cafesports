@@ -97,9 +97,8 @@ const Cronograma = () => {
                 {
                     key: "deatchmatch2",
                     description: "Los MVPs de cada partida jugada se enfrentarán en un deathmatch",
-                    vs: "Hollow vs The Last One",
                     judges: ["- Eyner Andrés Diaz", "- Juan David Lopez"],
-                    name: "Semifinal 1",
+                    name: "Deathmatch MVPs",
                     time: "1:00 pm - 3:00 pm (porque juega la sele)",
                 }
             ]
