@@ -92,7 +92,9 @@ const Cronograma = () => {
                     vs: "No name vs Codebreakers",
                     judges: ["- Eyner Andrés Diaz", "- Juan David Lopez"],
                     name: "Semifinal 2",
+                    ganadores: [""],
                     time: "11:00 am - 1:00 pm",
+                    details: "No Name",
                 },
                 {
                     key: "deatchmatch2",
