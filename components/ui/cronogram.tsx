@@ -1,4 +1,6 @@
 import { IconCheck } from "@tabler/icons-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const Cronograma = () => {
 
@@ -70,11 +72,35 @@ const Cronograma = () => {
                 },
                 {
                     key: "semi1",
-                    description: "La semifinal 1 es una partida competitiva normal de Valorant.",
+                    description: "La semifinal 1 es una partida Bo3 de Valorant.",
                     vs: "Hollow vs The Last One",
                     judges: ["- Juan David Lopez", "- Valeria Florez"],
                     name: "Semifinal 1",
+                    ganadores: [""],
                     time: "4:00 pm - 6:00 pm",
+                    details: "The Last One",
+                }
+            ]
+        },
+        {
+            date: "10 oct",
+            nameDate: "jueves",
+            events: [
+                {
+                    key: "semi2",
+                    description: "La semifinal 2 es una partida Bo3 de Valorant.",
+                    vs: "No name vs Codebreakers",
+                    judges: ["- Eyner Andrés Diaz", "- Juan David Lopez"],
+                    name: "Semifinal 2",
+                    time: "11:00 am - 1:00 pm",
+                },
+                {
+                    key: "deatchmatch2",
+                    description: "Los MVPs de cada partida jugada se enfrentarán en un deathmatch",
+                    vs: "Hollow vs The Last One",
+                    judges: ["- Eyner Andrés Diaz", "- Juan David Lopez"],
+                    name: "Semifinal 1",
+                    time: "1:00 pm - 3:00 pm (porque juega la sele)",
                 }
             ]
         },
@@ -116,7 +142,19 @@ const CalendarItem = ({ date, nameDate, events }: {
                         return (<div className="w-full bg-white/5 hover:bg-white/10 duration-700 rounded-lg border-2 border-white/15 hover:border-white/30 transition-colors px-4 py-2"
                             key={e.key}>
                             <div className="flex justify-between">
-                                <h1 className="text-sm font-normal text-white/50">{e.time}</h1>
+                                <div className="size-fit">
+
+                                    {"1:00 pm - 3:00 pm (porque juega la sele)" !== e.time && <h1 className="text-sm font-normal text-white/50">{e.time}</h1>}
+                                    {"1:00 pm - 3:00 pm (porque juega la sele)" === e.time && (
+                                        <div className="flex items-center gap-2">
+                                            <h1 className="text-sm font-normal text-white/50">{e.time}</h1>
+                                            <Link className="hover:scale-125 transition-transform" href={"https://www.caracoltv.com/senal-vivo"}>
+                                                <Image alt="col" src={"https://images.emojiterra.com/twitter/v14.0/512px/1f1e8-1f1f4.png"} className="w-[16px]" width={700} height={5} />
+                                            </Link>
+                                        </div>
+                                    )}
+
+                                </div>
                                 {e.ganadores && e.ganadores.length != 0 && <IconCheck />}
                             </div>
                             <h1 className="text-2xl font-bold text-[#8cd6bc]">{e.name}</h1>
