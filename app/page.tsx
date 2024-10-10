@@ -38,7 +38,7 @@ export default function Home() {
           </p>
 
         </motion.div>
-        {live && <Embeds live={live}/>}
+        <Embeds live={live} />
         <h1 className="w-full mt-8 text-center text-2xl font-bold "
           onCanPlay={() => setLive(true)}
         >Cronograma de Torneo</h1>
