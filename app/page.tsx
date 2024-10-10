@@ -22,7 +22,7 @@ export default function Home() {
     }
   })
   const [start, setStart] = useState(false);
-  const [live, setLive] = useState(false);
+  const [live, setLive] = useState(true);
   return (
     <main className="p-2 flex flex-col items-center max-w-3xl">
       <header className="h-fit flex flex-col gap-1 items-center mb-32">
@@ -38,7 +38,7 @@ export default function Home() {
           </p>
 
         </motion.div>
-        {live && <Embeds />}
+        {live && <Embeds live={live}/>}
         <h1 className="w-full mt-8 text-center text-2xl font-bold "
           onCanPlay={() => setLive(true)}
         >Cronograma de Torneo</h1>

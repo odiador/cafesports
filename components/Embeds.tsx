@@ -6,7 +6,7 @@ import Link from "next/link";
 import { KickEmbed, TwitchEmbed } from "./ui/Embed";
 import { useState } from "react";
 
-const Embeds = () => {
+const Embeds = ({ live }: { live: boolean }) => {
 
     const [showKick, setShowKick] = useState(false);
     const [showTwitch, setShowTwitch] = useState(false);
@@ -14,10 +14,10 @@ const Embeds = () => {
         <>
             <div className="font-operator flex items-center gap-1">
                 <motion.div className="size-4 rounded-full relative bg-red-600">
-                    <motion.div className="absolute top-0 left-0 size-4 rounded-full bg-black z-[1]" animate={{ opacity: 1 }} transition={{ from: 0, repeat: Infinity, repeatType: "mirror", duration: 0.01, delay: 1, repeatDelay: 1 }}>
+                    <motion.div className="absolute top-0 left-0 size-4 rounded-full bg-black z-[1]" animate={{ opacity: live ? 1 : 0 }} transition={{ from: 0, repeat: Infinity, repeatType: "mirror", duration: 0.01, delay: 1, repeatDelay: 1 }}>
                     </motion.div>
                 </motion.div>
-                <h1 className="text-center leading-none">LIVE</h1>
+                <h1 className="text-center leading-none">{live ? "LIVE" : "OFFLINE"}</h1>
             </div>
             <div className="bg-white/5 border-2 border-white/10 w-full flex flex-col p-2 rounded-lg items-center gap-4">
                 <div className="flex gap-4">
