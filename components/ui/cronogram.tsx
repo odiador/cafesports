@@ -101,6 +101,8 @@ const Cronograma = () => {
                     description: "Los MVPs de cada partida jugada se enfrentarán en un deathmatch",
                     judges: ["- Eyner Andrés Diaz", "- Juan David Lopez"],
                     name: "Deathmatch MVPs",
+                    ganadores: ["- Juan Mendez", "- Oscar Leandro", "- Juan Pablo Mejía"],
+                    details: "El día 5 tienen su premio",
                     time: "1:00 pm - 3:00 pm (porque juega la sele)",
                 }
             ]
