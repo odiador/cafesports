@@ -1,4 +1,5 @@
 import { IconCheck } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -107,6 +108,29 @@ const Cronograma = () => {
                 }
             ]
         },
+        {
+            date: "11 oct",
+            nameDate: "viernes",
+            events: [
+                {
+                    key: "final",
+                    description: "La final es una partida Bo3 de Valorant.",
+                    vs: "No name vs The Last One",
+                    judges: ["- Eyner Andrés Diaz", "- Juan David Lopez"],
+                    name: "Final",
+                    ganadores: [""],
+                    time: "11:00 am - 12:30 pm",
+                    details: "No Name",
+                },
+                {
+                    key: "premios",
+                    description: "Los equipos finalistas reciben un premio, tanto primer como segundo lugar.",
+                    judges: ["- Eyner Andrés Diaz", "- Juan David Lopez"],
+                    name: "Repartición de Premios",
+                    time: "12:30 pm - 1:00 pm",
+                }
+            ]
+        },
     ]
 
     return (<div className="mt-8 p-4">
@@ -134,7 +158,7 @@ const CalendarItem = ({ date, nameDate, events }: {
     }[]
 }) => {
     return (
-        <div className="flex gap-1" key={date}>
+        <motion.div className="flex gap-1" key={date}>
             <div className="h-auto w-fit">
                 <div className="w-1 h-full flex items-center justify-center bg-gradient-to-b from-[#8cd6bc] to-transparent relative  after:content-[''] after:absolute after:-left-1 after:-top-2 after:size-3 after:bg-[#8cd6bc] after:rounded-full" />
             </div>
@@ -176,6 +200,6 @@ const CalendarItem = ({ date, nameDate, events }: {
                     })}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }

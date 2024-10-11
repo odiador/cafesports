@@ -1,10 +1,8 @@
 const containerImage = {
-    hidden: { opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
     visible: {
-        opacity: 1,
-        transition: {
-            delayChildren: .25,
-        }
+        y: 0,
+        opacity: 1
     }
 };
 
@@ -20,10 +18,9 @@ const container = {
     }
 };
 const item = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { opacity: 0 },
     visible: {
-        y: 0,
-        opacity: 1
+        opacity: 1,
     }
 };
 export { container, item, containerImage };

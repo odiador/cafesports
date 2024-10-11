@@ -1,8 +1,8 @@
 "use client";
-import { containerImage, item } from "@/components/consts";
+import { container, containerImage, item } from "@/components/consts";
 import Embeds from "@/components/Embeds";
 import { TextGenerateEffect } from "@/components/ui/blur-generating-text";
-import Cronograma from "@/components/ui/cronogram";
+import Cronograma from "@/components/ui/chronogram";
 import { AnimatedTooltip } from "@/components/ui/image-frame";
 import Redes from "@/components/ui/redes";
 import { integrantes, valorantInfo } from "@/data/info";
@@ -22,12 +22,11 @@ export default function Home() {
     }
   })
   const [start, setStart] = useState(false);
-  const [live, setLive] = useState(false);
   return (
     <main className="p-2 flex flex-col items-center max-w-3xl">
-      <header className="h-fit flex flex-col gap-1 items-center mb-32">
-        <motion.div variants={item} className="text-center text-4xl font-bold flex" >
-          <h1 className="from-[#fdd868] via-30% via-[#fdd868] to-[#66ffad] bg-gradient-to-r bg-clip-text text-transparent font-extrabold">CafESports</h1>
+      <motion.header variants={container} className="h-fit flex flex-col gap-1 items-center mb-32">
+        <motion.div variants={item} className="text-center text-4xl from-[#fdd868] via-30% via-[#fdd868] to-[#66ffad] bg-gradient-to-r bg-clip-text text-transparent font-extrabold" >
+          CafESports
         </motion.div>
         <motion.div variants={item} initial="hidden" animate="visible" className="w-full mt-8 text-center text-xl">
 
@@ -36,19 +35,22 @@ export default function Home() {
             {" x "}
             <strong className={`font-extrabold bg-clip-text text-transparent to-[#f45865] via-50% bg-[#f45865] from-[#ff9e9e]`}>{valorantInfo.title}</strong>
           </p>
+          <p className="text-[#66ffad] font-bold text-2xl">
+<>{"Equipo ganador: "}</><span className="text-white">No Name</span>
+          </p>
 
         </motion.div>
-        <Embeds live={live} />
-        <h1 className="w-full mt-8 text-center text-2xl font-bold "
-          onCanPlay={() => setLive(true)}
-        >Cronograma de Torneo</h1>
-        <Cronograma />
-        <motion.div variants={item} className="flex flex-col gap-2 items-center  w-full bg-white/5 rounded-xl px-6 py-3">
+        <h1 className="w-full mt-8 text-center text-2xl font-bold ">Cronograma de Torneo</h1>
+        <motion.div variants={container}>
+          <Cronograma />
+        </motion.div>
+        <Embeds />
+        <motion.div variants={item} className="flex flex-col gap-2 items-center mt-8 w-full bg-white/5 rounded-xl px-6 py-3">
           <h1 className="text-xl font-bold">{"Nuestras redes:"}</h1>
           <Image priority src={valorantInfo.image} alt="" width={100} height={100} />
           <Redes />
         </motion.div>
-      </header>
+      </motion.header>
       <motion.section
         id="info"
         onViewportLeave={() => setStart(false)}
@@ -57,10 +59,7 @@ export default function Home() {
         initial={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         className="bg-white/5 rounded-lg mt-16 py-16 px-8 flex flex-col justify-center items-center">
-        <motion.h3 variants={item} className="text-center text-4xl font-bold w-3/4 text-wrap">¡Bienvenidos a nuestro equipo de E-Sports!</motion.h3>
-        <motion.div variants={item} className="mt-4 size-fit bg-white rounded-xl overflow-hidden">
-          <Image src={"/logot.png"} alt="Logo Transparent" className="size-64" width={256} height={256} />
-        </motion.div>
+        <motion.h3 variants={item} className="text-center text-4xl font-bold w-3/4 text-wrap">¿Quienes Somos?</motion.h3>
         <motion.div
           variants={item}
           className="font-normal">
