@@ -7,7 +7,7 @@ import { KickEmbed, TwitchEmbed } from "./ui/Embed";
 import { useState } from "react";
 
 const Embeds = () => {
-    const live = true;
+    const live = false;
     const [showKick, setShowKick] = useState(false);
     const [showTwitch, setShowTwitch] = useState(false);
     return (
