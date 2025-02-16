@@ -1,6 +1,7 @@
 import Image from "next/image";
 import './page.css';
 import Highlighting from "@/components/Hightlight";
+import Redirect from "@/components/Redirect";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
           NUEVO
         </span>
       </div>
-
+      <Redirect />
     </div>
   );
 }
