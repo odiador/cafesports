@@ -62,20 +62,4 @@ const Highlighting = () => {
     )
 }
 
-function AnimatedSVG() {
-    return (
-        <motion.svg width="200" height="200">
-            <motion.circle
-                cx="100"
-                cy="100"
-                r="50"
-                stroke="blue"
-                strokeWidth="5"
-                fill="none"
-                variants={draw}
-            />
-        </motion.svg>
-    );
-}
-
 export default Highlighting;
