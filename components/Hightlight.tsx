@@ -25,7 +25,7 @@ const Highlighting = () => {
             viewBox="0 0 810 518"
             version="1.1"
             id="svg5"
-            className="w-full scale-150 h-fit rotate-180 absolute top-4 left-2"
+            className="w-full scale-150 h-fit rotate-180 absolute top-4 left-2 pointer-events-none"
             initial="hidden"
             animate="visible"
             xmlns="http://www.w3.org/2000/svg"
