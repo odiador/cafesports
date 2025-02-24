@@ -5,12 +5,11 @@ import Redirect from "@/components/Redirect";
 
 export default function Home() {
   return (
-    <div className="h-screen flex md:flex-row flex-col-reverse md:p-0 w-full items-center gradient justify-center sm:gap-16">
+    <div className="h-screen flex md:flex-row flex-col-reverse md:p-0 w-full items-center justify-center sm:gap-16">
       <Redirect />
       <div className="basis">
         <div className="w-fit h-fit flex flex-col items-center">
-          <Image src={"/logot.png"} alt={"Logo"} width={408} height={408} className="size-40" />
-          CafEsports
+          <Image src={"/logot.png"} alt={"Logo"} width={408} height={408} className="size-60 md:size-80" />
         </div>
       </div>
       <div className="basis right">

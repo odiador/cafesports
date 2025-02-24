@@ -1,5 +1,5 @@
 .basis{
-    @apply p-2 md:p-0 text-5xl md:text-8xl w-full h-full from-background to-black/50 bg-gradient-to-b md:bg-gradient-to-l font-teko md:basis-1/2 flex flex-col justify-center items-center md:items-end;
+    @apply p-2 md:p-0 text-5xl md:text-8xl w-full h-full from-background to-black bg-gradient-to-b md:bg-gradient-to-l font-teko md:basis-1/2 flex flex-col justify-center items-center md:items-end;
     &.right {
         @apply text-7xl md:text-8xl bg-gradient-to-t md:bg-gradient-to-r items-center text-center md:text-left md:items-start;
 
