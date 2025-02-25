@@ -16,6 +16,7 @@ export default {
         teko: ["Teko", "normal"],
         bangers: ["Bangers", "normal"],
         nanum: ["Nanum pen script", "normal"],
+        questrial: ["Questrial", "normal"],
       },
     },
   },
