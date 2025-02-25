@@ -14,6 +14,8 @@ export default {
       },
       fontFamily: {
         teko: ["Teko", "normal"],
+        bangers: ["Bangers", "normal"],
+        nanum: ["Nanum pen script", "normal"],
       },
     },
   },

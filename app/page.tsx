@@ -1,24 +1,30 @@
 import Image from "next/image";
+
+import ArrowScroll from "@/components/ArrowScroll";
 import './page.css';
-import Highlighting from "@/components/Hightlight";
-import Redirect from "@/components/Redirect";
 
 export default function Home() {
   return (
-    <div className="h-screen flex md:flex-row flex-col-reverse md:p-0 w-full items-center justify-center sm:gap-16">
-      <Redirect />
-      <div className="basis">
+    <div className="min-h-screen flex flex-col w-full items-center justify-start p-4">
+      <div className="h-svh flex flex-col items-center justify-between gap-8 p-8">
         <div className="w-fit h-fit flex flex-col items-center">
-          <Image src={"/logot.png"} alt={"Logo"} width={408} height={408} className="size-60 md:size-80" />
+          <Image src={"/logot.png"} alt={"Logo"} width={408} height={408} className="size-40" />
         </div>
+        <div className="font-bangers text-6xl w-full text-center flex flex-col text-foreground">Tú decides qué jugamos
+          <span className="font-teko text-2xl w-full text-[#a96eb9] text-center">El destino del torneo está en tus manos</span>
+        </div>
+        <ArrowScroll />
       </div>
-      <div className="basis right">
-        PREPÁRATE<br />PARA ALGO<br />
-        <span className="relative">
-          <Highlighting />
-          NUEVO
-        </span>
-      </div>
+      <iframe
+        id="form"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSet433DHXMx-59RkCWSDB_L7PK7YzzH6TL6JD_9H8U47QKsFQ/viewform?embedded=true"
+        width="640"
+        height="800"
+        className="w-full max-w-3xl border border-gray-300 bg-white rounded-lg pointer-events-auto"
+      >
+        Cargando…
+      </iframe>
+
     </div>
   );
 }
