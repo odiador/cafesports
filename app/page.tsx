@@ -17,7 +17,7 @@ export default function Home() {
         </div>
         <ArrowScroll />
       </section>
-      <section id="form" className="h-svh w-full flex flex-col items-center justify-between gap-8 py-4 px-2">
+      <section id="form" className="h-fit w-full flex flex-col items-center justify-between gap-8 py-4 px-2">
         <Link target="_blank" href={"https://docs.google.com/forms/d/e/1FAIpQLSet433DHXMx-59RkCWSDB_L7PK7YzzH6TL6JD_9H8U47QKsFQ/viewform"}><button className="bg-[#7248b9] flex text-4xl gap-2 items-center px-4 py-2 text-white rounded-lg transition-all hover:scale-110 font-teko">
           <SiGoogleforms className="" />
           Vota Aquí</button>
