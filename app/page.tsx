@@ -15,7 +15,7 @@ export default function Home() {
         </div>
         <ArrowScroll />
       </section>
-      <section className="h-svh w-full flex flex-col items-center justify-between gap-8 py-4 px-6">
+      <section className="h-svh w-full flex flex-col items-center justify-between gap-8 py-4 px-2">
         <iframe
           id="form"
           src="https://docs.google.com/forms/d/e/1FAIpQLSet433DHXMx-59RkCWSDB_L7PK7YzzH6TL6JD_9H8U47QKsFQ/viewform?embedded=true"
