@@ -19,7 +19,7 @@ export default function Home() {
         id="form"
         src="https://docs.google.com/forms/d/e/1FAIpQLSet433DHXMx-59RkCWSDB_L7PK7YzzH6TL6JD_9H8U47QKsFQ/viewform?embedded=true"
         width="640"
-        height="800"
+        height="400"
         className="w-full max-w-3xl border border-gray-300 bg-white rounded-lg pointer-events-auto"
       >
         Cargando…
