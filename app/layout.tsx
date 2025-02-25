@@ -17,7 +17,24 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Cafesports",
-  description: "Made by odiador",
+  description: "Hecha por Odiador",
+  keywords: ["Esports", "Café", "cafesports.odiador.dev", "odiador.dev", "Consultoría tecnológica"],
+  openGraph: {
+    title: "Cafesports",
+    description: "Hecha por Odiador",
+    url: "https://cafesports.odiador.dev",
+    siteName: "cafesports.odiador.dev",
+    images: [
+      {
+        url: "https://cafesports.odiador.dev/logot.png", // Cambia por una imagen representativa
+        width: 325,
+        height: 325,
+        alt: "cafesports.odiador.dev - Cafesports",
+      },
+    ],
+    locale: "es_CO",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
