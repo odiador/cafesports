@@ -50,23 +50,25 @@ const Cursor = () => {
     }, []);
 
     return (
-        <div className="w-full h-full md:block hidden fixed top-0 left-0 pointer-events-none z-[999] mix-blend-difference">
+        <div className="w-full h-full md:block hidden fixed top-0 left-0 pointer-events-none z-[999] mix-blend-overlay">
             <AnimatePresence>
                 <motion.div
-                    className="rounded-full absolute pointer-events-none bg-white"
+                    className="rounded-full absolute pointer-events-none bg-white/25"
                     animate={{
-                        x: mousePosition.x - 10,
-                        y: mousePosition.y - 10,
-                        scale: isHoveringLink ? 3 : 1,
+                        x: mousePosition.x - 24,
+                        y: mousePosition.y - 24,
+                        scale: isHoveringLink ? 2 : 1,
                     }}
                     transition={{
-                        x: { duration: 0, ease: "linear" },
-                        y: { duration: 0, ease: "linear" },
+                        // x: { duration: 0.2, ease: "easeOut" },
+                        // y: { duration: 0.2, ease: "easeOut" },
+                        x: { type: "spring", stiffness: 500, damping: 100, },
+                        y: { type: "spring", stiffness: 500, damping: 100, },
                         scale: { type: "spring", stiffness: 1000, damping: 100, }
                     }}
                     style={{
-                        width: "32px",
-                        height: "32px",
+                        width: "48px",
+                        height: "48px",
                         visibility: isHidden ? "hidden" : "visible",
                     }}
                 />

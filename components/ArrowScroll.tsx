@@ -4,7 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const ArrowScroll = () => {
     return (
-        <Link href={"#form"} scroll className="flex flex-col items-center text-[#8ae4e7]">
+        <Link href={"#form"} scroll className="flex flex-col items-center text-[#8ae4e7] cursor-pointer">
             <div className="font-bangers text-5xl w-full text-center flex flex-col">Llena la encuesta</div>
             <IoIosArrowDown className="animate-bounce text-5xl" />
         </Link>

@@ -8,7 +8,7 @@ import { SiGoogleforms } from "react-icons/si";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col w-full items-center justify-start p-4">
-      <section className="h-svh flex flex-col items-center justify-between gap-8 p-8">
+      <section className="min-h-svh flex flex-col items-center justify-between gap-8 p-8">
         <div className="w-fit h-fit flex flex-col items-center">
           <Image src={"/logot.png"} alt={"Logo"} width={408} height={408} className="size-40" />
         </div>
