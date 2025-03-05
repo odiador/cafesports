@@ -60,8 +60,8 @@ const Cursor = () => {
                         scale: isHoveringLink ? 2 : 1,
                     }}
                     transition={{
-                        x: { duration: 0.375, ease: [0.25, 1, 0.5, 1], },
-                        y: { duration: 0.375, ease: [0.25, 1, 0.5, 1], },
+                        x: { duration: 0.2, ease: [0.25, 1, 0.5, 1], },
+                        y: { duration: 0.2, ease: [0.25, 1, 0.5, 1], },
                         // x: { type: "spring", stiffness: 1000, damping: 100, },
                         // y: { type: "spring", stiffness: 1000, damping: 100, },
                         scale: { type: "spring", stiffness: 1000, damping: 100, }
