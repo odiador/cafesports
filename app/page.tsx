@@ -9,7 +9,7 @@ import './page.css';
 export default function Home() {
   return (
     <div id="#home" className="min-h-screen flex flex-col w-full items-center justify-start">
-      <section className="min-h-screen pt-24 flex flex-col items-center justify-start gap-16">
+      <section className="min-h-screen pt-20 flex flex-col items-center justify-start gap-16">
         <div className="w-fit h-fit flex flex-col items-center">
           <Image src={"/logot.png"} alt={"Logo"} width={408} height={408} className="size-40" />
         </div>
@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <ArrowScroll href={"#torneos"} />
       </section>
-      <section id="torneos" className="min-h-screen pt-24 flex flex-col w-full items-center gap-8 p-4 sm:p-8 lg:max-w-5xl">
+      <section id="torneos" className="min-h-screen pt-20 flex flex-col w-full items-center gap-8 p-4 sm:p-8 lg:max-w-5xl">
         <Torneos/>
       </section>
     </div>
