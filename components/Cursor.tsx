@@ -1,7 +1,7 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const Cursor = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -53,17 +53,17 @@ const Cursor = () => {
         <div className="w-full h-full md:block hidden fixed top-0 left-0 pointer-events-none z-[999] mix-blend-overlay">
             <AnimatePresence>
                 <motion.div
-                    className="rounded-full absolute pointer-events-none bg-white/25"
+                    className="rounded-full absolute pointer-events-none bg-white/50"
                     animate={{
                         x: mousePosition.x - 24,
                         y: mousePosition.y - 24,
                         scale: isHoveringLink ? 2 : 1,
                     }}
                     transition={{
-                        // x: { duration: 0.2, ease: "easeOut" },
-                        // y: { duration: 0.2, ease: "easeOut" },
-                        x: { type: "spring", stiffness: 500, damping: 100, },
-                        y: { type: "spring", stiffness: 500, damping: 100, },
+                        x: { duration: 0.375, ease: [0.25, 1, 0.5, 1], },
+                        y: { duration: 0.375, ease: [0.25, 1, 0.5, 1], },
+                        // x: { type: "spring", stiffness: 1000, damping: 100, },
+                        // y: { type: "spring", stiffness: 1000, damping: 100, },
                         scale: { type: "spring", stiffness: 1000, damping: 100, }
                     }}
                     style={{

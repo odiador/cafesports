@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const FooterSection = () => {
     return (<section className="w-full font-nanum text-xl flex flex-col items-center py-4">
-        <Link className="cursor-pointer" href={"https://odiador.dev"} target="_blank">
-            <motion.div initial="normal" whileHover={"odiador"} className="relative  w-56 cursor-pointer text-center text-xl/[1.25rem] font-bold text-nowrap flex gap-1">
+        <Link className="cursor-pointer w-56" href={"https://odiador.dev"} target="_blank">
+            <motion.div initial="normal" whileHover={"odiador"} className="relative w-full cursor-pointer text-center text-xl/[1.25rem] font-bold text-nowrap flex justify-center items-center gap-1">
                 {"Made with ❤️ by "}
                 <div className="relative">
                     <div className="relative select-none overflow-hidden h-5 w-14">
@@ -28,13 +28,6 @@ const FooterSection = () => {
                 </div>
             </motion.div>
         </Link>
-
     </section>);
 }
 export default FooterSection;
-
-/**
- * 
- * 
- * <motion.span className="text-[#a96eb9] select-none cursor-pointer absolute text-nowrap font-bold top-[2px] left-0 size-full text-center text-xl/[1rem]" variants={{ normal: { y: 0, opacity: 1 }, odiador: { y: 20, } }}>
- */

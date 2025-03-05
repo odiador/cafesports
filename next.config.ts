@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/
+});
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+const nextConfig = withMDX({
+  pageExtensions: ['tsx', 'mdx'],
+  experimental: {
+    mdxRs: true
+  }
+});
 
 export default nextConfig;

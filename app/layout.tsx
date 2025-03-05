@@ -4,6 +4,7 @@ import "./globals.css";
 import Redirect from "@/components/Redirect";
 import FooterSection from "@/components/FooterSection";
 import Cursor from "@/components/Cursor";
+import Navigation from "@/components/Navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,8 +48,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <h1 className="hidden">Cafesport</h1>
+        <h1 className="hidden">Cafesports</h1>
         <Redirect />
+        <Navigation/>
         {children}
         <Cursor />
         <FooterSection />
