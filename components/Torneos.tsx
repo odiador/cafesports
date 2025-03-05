@@ -4,6 +4,7 @@ import { BsPeopleFill } from "react-icons/bs";
 import { MdLocationPin } from "react-icons/md";
 import TorneosDM from "../utils/torneo.mdx";
 import AnimatedStats from "./AnimatedStats";
+import FacebookEmbed from "./embed/FacebookEmbed";
 
 const Torneos = () => {
     return (
@@ -41,11 +42,10 @@ export const InfoTorneo = () => {
                 </div>
             </div>
         </div>
-        <iframe
-            className="sm:max-w-xl w-fit mt-4 aspect-video"
-            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbienestarinstitucionaluq%2Fposts%2Fpfbid02nefW9sbkFCKPR7nH4Kc1QphoZtwharAfzBQMnPvDopyWcAPWFxydjmvtADEeaBLYl&show_text=false&width=500"
-            width="672" height="378"
-            style={{ border: "none", overflow: "hidden" }} scrolling="no" frameBorder={0} allowFullScreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <div className="w-full flex justify-center mt-4">
+            <FacebookEmbed url="https://www.facebook.com/bienestarinstitucionaluq/posts/1063589512443741" />
+        </div>
+
     </>)
 }
 export default Torneos;

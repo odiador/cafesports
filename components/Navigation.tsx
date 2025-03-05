@@ -19,7 +19,7 @@ const Navigation = () => {
 
     return (
         <motion.nav
-            className="bg-black h-20 px-8 py-4 sticky top-0 left-0 backdrop-blur-md transition-all flex justify-between items-center"
+            className="bg-black h-20 px-8 py-4 fixed w-full top-0 left-0 backdrop-blur-md transition-all flex justify-between items-center"
             style={{ backgroundColor: `rgba(0,0,0,${bgOpacity})`, borderWidth: "0 0 1px 0", borderColor: bgOpacity ? "rgba(255,255,255,0.1)" : "transparent", }}
         >
             <Link href={"#"} onClick={(e) => {

@@ -1,15 +1,10 @@
 "use client";
-import { redirect, RedirectType, usePathname } from "next/navigation";
-import { useEffect } from "react"
+import { useEffect } from "react";
 
-const Redirect = () => {
-    const pathname = usePathname();
+export default function FacebookEmbed({ url }: { url: string }) {
     useEffect(() => {
-        const url = window.location.href;
-        if (!url.startsWith("https://www.cafesports.club/"))
-            redirect(`https://www.cafesports.club${pathname}`, RedirectType.replace)
-
-        if (window && window.FB) {
+        // Verifica si FB ya está cargado
+        if (window.FB) {
             window.FB.XFBML.parse();
             return;
         }
@@ -30,8 +25,7 @@ const Redirect = () => {
             script.async = true;
             document.body.appendChild(script);
         }
-    })
+    }, []);
 
-    return <></>;
+    return <div className="fb-post bg-white" data-href={url} data-width="500"></div>;
 }
-export default Redirect;
