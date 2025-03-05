@@ -9,6 +9,7 @@ declare global {
             XFBML: { parse: () => void };
         };
         fbAsyncInit?: () => void;
+        fbScriptLoaded?: boolean;
     }
 }
 
@@ -19,6 +20,7 @@ const Redirect = () => {
         const url = window.location.href;
         if (!url.startsWith("https://www.cafesports.club/")) {
             redirect(`https://www.cafesports.club${pathname}`, RedirectType.replace);
+            return;
         }
 
         if (window.FB) {
@@ -26,18 +28,28 @@ const Redirect = () => {
             return;
         }
 
-        // Inicializa el SDK de Facebook solo si FB está definido
         window.fbAsyncInit = function () {
-            if (typeof window.FB !== "undefined") {
+            if (window.FB) {
                 window.FB.init({
                     xfbml: true,
                     version: "v18.0",
                 });
+                window.FB.XFBML.parse();
             }
         };
 
-        // Carga el script del SDK si aún no está en la página
-        if (!document.getElementById("facebook-jssdk")) {
+        // Cargar el SDK solo si aún no está en la página
+        if (!window.fbScriptLoaded) {
+            window.fbScriptLoaded = true; // Marcar que el SDK ya fue cargado
+
+            window.fbAsyncInit = function () {
+                window.FB?.init({
+                    xfbml: true,
+                    version: "v18.0",
+                });
+                window.FB?.XFBML.parse();
+            };
+
             const script = document.createElement("script");
             script.id = "facebook-jssdk";
             script.src = "https://connect.facebook.net/es_LA/sdk.js";
@@ -51,7 +63,7 @@ const Redirect = () => {
         }
     }, []);
 
-    return <></>;
+    return null;
 };
 
 export default Redirect;

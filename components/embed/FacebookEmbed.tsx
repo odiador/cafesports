@@ -28,5 +28,10 @@ export default function FacebookEmbed({ url }: { url: string }) {
         }
     }, []);
 
-    return <div className="fb-post bg-white" data-href={url} data-width="500"></div>;
+    return <div className="overflow-hidden w-full flex justify-center rounded-xl"
+    >
+        <div className="fb-post rounded-xl w-fit overflow-x-hidden"
+            data-show-text="false"
+            data-href={url} data-width="300px" />
+    </div>
 }

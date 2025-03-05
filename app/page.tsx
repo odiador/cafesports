@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         <ArrowScroll href={"#torneos"} />
       </section>
-      <section id="torneos" className="min-h-screen pt-24 flex flex-col w-full items-center gap-8 p-8 lg:max-w-5xl">
+      <section id="torneos" className="min-h-screen pt-24 flex flex-col w-full items-center gap-8 p-4 sm:p-8 lg:max-w-5xl">
         <Torneos/>
       </section>
     </div>

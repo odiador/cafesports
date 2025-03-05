@@ -46,10 +46,10 @@ export default function RootLayout({
   return (
     <html lang="es" style={{ scrollBehavior: 'smooth' }}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
-        <h1 className="hidden">Cafesports</h1>
         <Redirect />
+        <h1 className="hidden">Cafesports</h1>
         <Navigation/>
         {children}
         <Cursor />
