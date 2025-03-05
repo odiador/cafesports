@@ -3,6 +3,7 @@ import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SiGoogleforms } from "react-icons/si";
 
 const Navigation = () => {
     const { scrollY } = useScroll();
@@ -27,11 +28,15 @@ const Navigation = () => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
             }} className="h-full w-fit"><Image src={"/logot.png"} alt={"Logo"} width={408} height={408} className="h-full w-fit" /></Link>
             <div className="flex gap-4">
-                <Link className="font-questrial text-2xl" href={"#torneos"}>Torneos</Link>
-                <button className="font-questrial text-2xl">Galería</button>
+                <Link className="font-questrial text-2xl font-semibold" href={"#torneos"}>Torneos</Link>
+                <Link className="font-questrial text-2xl font-semibold" href={"#galeria"}>Galería</Link>
             </div>
             <div>
-                :)
+                <Link target="_blank"
+                    href={"https://docs.google.com/forms/d/e/1FAIpQLSet433DHXMx-59RkCWSDB_L7PK7YzzH6TL6JD_9H8U47QKsFQ/viewform"}
+                    className="group">
+                    <SiGoogleforms className="text-3xl group-hover:scale-110 transition-all" />
+                </Link>
             </div>
         </motion.nav>
     );
