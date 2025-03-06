@@ -15,7 +15,7 @@ export default function AnimatedStats({ value, duration = 1, ref, style, classNa
     const count = useMotionValue(0);
     const [displayValue, setDisplayValue] = useState(0);
     const refNumber = useRef(null);
-    const isInView = useInView(ref || refNumber, { once: true, amount: "all" });
+    const isInView = useInView(ref || refNumber, { amount: "all" });
 
     useEffect(() => {
         if (isInView) {
