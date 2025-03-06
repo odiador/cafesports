@@ -12,7 +12,7 @@ const Navigation = () => {
 
     useEffect(() => {
         const unsubscribe = scrollY.on("change", (latest) => {
-            setBgOpacity(latest === 0 ? 0 : 0.15);
+            setBgOpacity(latest === 0 ? 0 : 0.2);
         });
 
         return () => unsubscribe();
@@ -20,7 +20,7 @@ const Navigation = () => {
 
     return (
         <motion.nav
-            className="bg-black h-16 px-8 py-2 fixed w-full top-0 left-0 backdrop-blur-md transition-all flex justify-between items-center"
+            className="bg-black h-16 z-[999] px-8 py-2 fixed w-full top-0 left-0 backdrop-blur-md transition-all flex justify-between items-center"
             style={{ backgroundColor: `rgba(0,0,0,${bgOpacity})`, borderWidth: "0 0 1px 0", borderColor: bgOpacity ? "rgba(255,255,255,0.1)" : "transparent", }}
         >
             <Link href={"#"} onClick={(e) => {
