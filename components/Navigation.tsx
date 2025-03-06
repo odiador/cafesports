@@ -29,7 +29,7 @@ const Navigation = () => {
             }} className="h-full w-fit"><Image src={"/logot.png"} alt={"Logo"} width={408} height={408} className="h-full w-fit" /></Link>
             <div className="flex gap-4">
                 <Link className="font-questrial text-2xl font-semibold" href={"#torneos"}>Torneos</Link>
-                <Link className="font-questrial text-2xl font-semibold" href={"#galeria"}>Galería</Link>
+                {/* <Link className="font-questrial text-2xl font-semibold" href={"#galeria"}>Galería</Link> */}
             </div>
             <div>
                 <Link target="_blank"
