@@ -5,6 +5,7 @@ import Redirect from "@/components/Redirect";
 import FooterSection from "@/components/FooterSection";
 import Cursor from "@/components/Cursor";
 import Navigation from "@/components/Navigation";
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,9 +49,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
+        <Analytics />
         <Redirect />
         <h1 className="hidden">Cafesports</h1>
-        <Navigation/>
+        <Navigation />
         {children}
         <Cursor />
         <FooterSection />
