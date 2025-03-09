@@ -6,9 +6,9 @@ import { RefObject, useEffect, useRef, useState } from "react";
 interface AnimatedStatsProps {
     value: number;
     duration?: number;
-    ref?: RefObject<null>
+    ref?: RefObject<null>,
     style?: MotionStyle,
-    className?: string
+    className?: string,
 }
 
 export default function AnimatedStats({ value, duration = 1, ref, style, className }: AnimatedStatsProps) {
@@ -19,6 +19,7 @@ export default function AnimatedStats({ value, duration = 1, ref, style, classNa
 
     useEffect(() => {
         if (isInView) {
+            count.set(0);
             const controls = animate(count, value, {
                 duration,
                 ease: [0.25, 1, 0.5, 1],
@@ -27,7 +28,7 @@ export default function AnimatedStats({ value, duration = 1, ref, style, classNa
 
             return () => controls.stop();
         }
-    }, [isInView, count, value, duration]);
+    }, [isInView, value, duration]);
 
     return (
         <motion.h3 style={style} ref={refNumber} className={`w-fit ${className}`}>
