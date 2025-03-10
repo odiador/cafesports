@@ -20,7 +20,8 @@ body {
     @apply list-inside list-item font-questrial text-xl;
   }
 
-  & p, & span {
+  & p,
+  & span {
     @apply font-questrial text-xl;
   }
 
@@ -49,4 +50,8 @@ body {
   li>p {
     display: inline;
   }
+}
+
+h1 {
+  @apply font-bangers text-6xl text-center flex flex-col text-[#cc86df];
 }
