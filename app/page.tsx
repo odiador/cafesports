@@ -17,7 +17,7 @@ export default function Home() {
           <div className="font-bangers text-6xl text-center flex flex-col text-foreground items-center justify-center gap-1">
             Las votaciones han concluido
             <span className="font-teko text-2xl w-full text-[#cc86df] text-center">Mantente atento a las novedades</span>
-            <div className="text-teal-200 text-3xl flex flex-col items-center justify-center pb-2 gap-2">Juego ganador: Valorant</div>
+            <div className="text-teal-200 text-3xl flex flex-col items-center justify-center pb-2 gap-2">Juegos ganadores: Valorant y LOL</div>
             <Link href={"#stats"}><button className="bg-[#7248b9] flex text-4xl gap-2 items-center px-4 py-2 text-white rounded-lg transition-all hover:scale-110 font-teko">
               Ver estadísticas</button>
             </Link>
