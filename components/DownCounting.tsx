@@ -6,7 +6,7 @@ import { renderer } from "./countdownRenderer"
 const downCounting = () => {
     return (
         <div className="text-teal-200 text-3xl flex flex-col items-center justify-center pb-2 gap-2">
-            Puedes votar hasta:
+            Puedes inscribirte hasta:
             <Countdown date={endOfVoting} renderer={renderer} />
         </div>
     )
