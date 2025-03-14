@@ -1,4 +1,5 @@
 "use client";
+import { redirect, RedirectType, usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 declare global {
@@ -13,14 +14,14 @@ declare global {
 }
 
 const Redirect = () => {
-    // const pathname = usePathname();
+    const pathname = usePathname();
 
     useEffect(() => {
-        // const url = window.location.href;
-        // if (!url.startsWith("https://www.cafesports.club/")) {
-        //     redirect(`https://www.cafesports.club${pathname}`, RedirectType.replace);
-        //     return;
-        // }
+        const url = window.location.href;
+        if (!url.startsWith("https://www.cafesports.club/")) {
+            redirect(`https://www.cafesports.club${pathname}`, RedirectType.replace);
+            return;
+        }
 
         if (window.FB) {
             window.FB.XFBML.parse();
