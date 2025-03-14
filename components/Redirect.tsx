@@ -18,10 +18,10 @@ const Redirect = () => {
 
     useEffect(() => {
         const url = window.location.href;
-        if (!url.startsWith("https://www.cafesports.club/")) {
-            redirect(`https://www.cafesports.club${pathname}`, RedirectType.replace);
-            return;
-        }
+        // if (!url.startsWith("https://www.cafesports.club/")) {
+        //     redirect(`https://www.cafesports.club${pathname}`, RedirectType.replace);
+        //     return;
+        // }
 
         if (window.FB) {
             window.FB.XFBML.parse();
