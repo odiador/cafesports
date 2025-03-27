@@ -1,4 +1,4 @@
-const endOfVoting = Date.UTC(2025, 2, 29, 5, 0, 0, 0);
+const endOfVoting = Date.UTC(2025, 2, 31, 5, 0, 0, 0);
 const votingData = [
     { name: "Valorant", cantidad: 31 },
     { name: "League of Legends", cantidad: 19 },
