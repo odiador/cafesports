@@ -11,7 +11,7 @@ import DownCounting from "@/components/DownCounting";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col w-full items-center justify-start">
-      <section id="home" className="min-h-screen w-full pt-20 flex flex-col">
+      <section id="home" className="h-[calc(100vh-128px)] w-full flex flex-col">
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 h-full flex-1">
           <div className="flex items-center">
             <Image src={"/logot.png"} alt={"Logo"} width={408} height={408} className="size-40 md:size-80 md:min-w-80" />

@@ -55,10 +55,12 @@ export default function RootLayout({
         <Analytics />
         <Redirect />
         <h1 className="hidden">Cafesports</h1>
-        <Navigation />
-        {children}
-        <Cursor />
-        <FooterSection />
+        <div className="flex flex-col justify-between min-h-screen">
+          <Navigation />
+          <div className="flex-1 flex flex-col pt-20">{children}</div>
+          <Cursor />
+          <FooterSection />
+        </div>
       </body>
     </html>
   );
