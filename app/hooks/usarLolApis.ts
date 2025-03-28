@@ -37,7 +37,7 @@ export function useLolData(puuid: string, apiKey: string): LolData {
 
         // Obtener champion masteries
         const masteries: ChampionMastery[] = await fetchChampionMastery(puuid, apiKey);
-        let topChampion, championName, championImageUrl;
+        let topChampion: ChampionMastery | null | undefined, championName: string | null | undefined, championImageUrl: string | null | undefined;
         // Determinar el campeón con mayor maestría
         if (masteries.length > 0) {
           topChampion = masteries.reduce((prev, curr) =>
@@ -50,9 +50,13 @@ export function useLolData(puuid: string, apiKey: string): LolData {
           // Obtener la URL de la imagen del campeón
           championImageUrl = await getChampionImageUrl(topChampion.championId);
         }
-        setData({ ...data, championName, topChampion, summoner, masteries, championImageUrl});
-      } catch (err: any) {
-        setData({ error: err.message || 'Error al cargar datos' });
+        setData(prev => ({ ...data, championName, topChampion, summoner, masteries, championImageUrl }));
+      } catch (err) {
+        if (err instanceof Error) {
+          setData({ error: err.message || 'Error al cargar datos' });
+        } else {
+          setData({ error: 'Error al cargar datos' });
+        }
       } finally {
         setData({ ...data, loading: false });
       }
