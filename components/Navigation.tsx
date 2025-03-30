@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { BsInstagram } from "react-icons/bs";
+import { BsInstagram, BsTwitch } from "react-icons/bs";
 import { SiKick } from "react-icons/si";
 
 const Navigation = () => {
@@ -50,6 +50,12 @@ const Navigation = () => {
                     target="_blank"
                     className="group">
                     <BsInstagram className="text-2xl group-hover:scale-110 transition-all" />
+                </Link>
+                <Link
+                    href={"http://twitch.tv/cafesportsclub"}
+                    target="_blank"
+                    className="group">
+                    <BsTwitch className="text-2xl group-hover:scale-110 transition-all" />
                 </Link>
             </div>
         </motion.nav>
