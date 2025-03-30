@@ -1,6 +1,6 @@
 export async function fetchChampionMastery(puuid: string, apiKey: string) {
     const response = await fetch(
-      `https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}?api_key=${apiKey}`
+      `https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}/top?count=1&api_key=${apiKey}`
     );
     if (!response.ok) {
       throw new Error("Error al obtener la maestría del campeon");

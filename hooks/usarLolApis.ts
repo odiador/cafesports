@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { getChampionDataById } from '../api/ChampionApi';
 import { fetchChampionMastery, fetchSummonerInfo } from '../api/RiotApi';
-import { getChampionNameById } from '../api/ChampionApi';
-import { getChampionImageUrl } from '../api/ChampionPhotoApi';
 
 export interface SummonerInfo {
   name: string;
@@ -12,6 +11,8 @@ export interface ChampionMastery {
   championId: number;
   championLevel: number;
   championPoints: number;
+  lastPlayTime: number;
+  lastTimePlayed?: Date;
 }
 
 interface LolData {
@@ -24,12 +25,13 @@ interface LolData {
   error?: string | null
 }
 
-export function useLolData(puuid: string, apiKey: string): LolData {
+export function useLolData(puuid?: string, apiKey?: string): LolData {
   const [data, setData] = useState<LolData>({});
 
 
   useEffect(() => {
     async function getData() {
+      if (!puuid || !apiKey) return;
       try {
         setData({ ...data, loading: true });
         // Obtener información del summoner
@@ -40,17 +42,17 @@ export function useLolData(puuid: string, apiKey: string): LolData {
         let topChampion: ChampionMastery | null | undefined, championName: string | null | undefined, championImageUrl: string | null | undefined;
         // Determinar el campeón con mayor maestría
         if (masteries.length > 0) {
-          topChampion = masteries.reduce((prev, curr) =>
-            curr.championPoints > prev.championPoints ? curr : prev
-          );
+
+          topChampion = masteries[0];
+          topChampion.lastTimePlayed = new Date(topChampion.lastPlayTime);
+
 
           // Obtener el nombre del campeón
-          championName = await getChampionNameById(topChampion.championId);
-
-          // Obtener la URL de la imagen del campeón
-          championImageUrl = await getChampionImageUrl(topChampion.championId);
+          let { name, imageUrl } = getChampionDataById(topChampion.championId);
+          championName = name;
+          championImageUrl = imageUrl;
         }
-        setData(prev => ({ ...data, championName, topChampion, summoner, masteries, championImageUrl }));
+        setData(prev => ({ ...prev, championName, topChampion, summoner, masteries, championImageUrl }));
       } catch (err) {
         if (err instanceof Error) {
           setData({ error: err.message || 'Error al cargar datos' });
@@ -58,7 +60,7 @@ export function useLolData(puuid: string, apiKey: string): LolData {
           setData({ error: 'Error al cargar datos' });
         }
       } finally {
-        setData({ ...data, loading: false });
+        setData(prev => ({ ...prev, loading: false }));
       }
     }
     getData();

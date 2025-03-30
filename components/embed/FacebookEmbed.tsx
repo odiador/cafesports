@@ -1,8 +1,11 @@
 "use client";
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 export default function FacebookEmbed({ url }: { url: string }) {
+    const path = usePathname();
     useEffect(() => {
+        if (path !== "/") return;
         // Verifica si FB ya está cargado
         if (window.FB) {
             window.FB.XFBML.parse();

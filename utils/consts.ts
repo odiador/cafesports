@@ -52,4 +52,28 @@ function groupSmallCategories(data: { name: string; cantidad: number; }[], thres
     return result;
 }
 
-export { endOfVoting, votingData, groupSmallCategories };
+interface LOLPlayerInfo {
+    id: string;
+    puuid: string;
+    gameName: string;
+    tagLine: string;
+}
+
+const lolplayers = [
+    {
+        id: "0",
+        puuid: "M9Tt22y7g5GhzdP-921Vx625or8fkM_tlI9OgyfNRAN9MSPlqaElmZlLjws51PLzJo1GLHWL3_2H5g",
+        gameName: "1010papi",
+        tagLine: "LAN",
+    },
+    {
+        id: "1",
+        "puuid": "NDbOUfvH8XzSWDNsH5vayaBIUlXxW6A29cD9hj_VxOKopV6dsceiTN8cjdRyPur-Lu_0klK7YbwnSg",
+        "gameName": "andresddiaz",
+        "tagLine": "LAN"
+    }
+] as LOLPlayerInfo[];
+
+export { endOfVoting, votingData, groupSmallCategories, lolplayers };
+export type { LOLPlayerInfo };
+
