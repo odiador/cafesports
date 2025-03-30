@@ -35,10 +35,10 @@ export function useLolData(puuid?: string, apiKey?: string): LolData {
       try {
         setData({ ...data, loading: true });
         // Obtener información del summoner
-        const summoner: SummonerInfo = await fetchSummonerInfo(puuid, apiKey);
+        const summoner: SummonerInfo = await fetchSummonerInfo(puuid);
 
         // Obtener champion masteries
-        const masteries: ChampionMastery[] = await fetchChampionMastery(puuid, apiKey);
+        const masteries: ChampionMastery[] = await fetchChampionMastery(puuid);
         let topChampion: ChampionMastery | null | undefined, championName: string | null | undefined, championImageUrl: string | null | undefined;
         // Determinar el campeón con mayor maestría
         if (masteries.length > 0) {

@@ -1,21 +1,29 @@
-export async function fetchChampionMastery(puuid: string, apiKey: string) {
-    const response = await fetch(
-      `https://la1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}/top?count=1&api_key=${apiKey}`
-    );
+const API_URL = "https://api.odiador.dev";
+
+export async function fetchChampionMastery(puuid: string) {
+    const response = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ method: "fetchChampionMastery", puuid })
+    });
+
     if (!response.ok) {
-      throw new Error("Error al obtener la maestría del campeon");
+        throw new Error("Error al obtener la maestría del campeón");
     }
-    const data = await response.json();
-    return data;
-  }
-  
-  export async function fetchSummonerInfo(puuid: string, apiKey: string) {
-    const response = await fetch(
-      `https://la1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${apiKey}`
-    );
+
+    return await response.json();
+}
+
+export async function fetchSummonerInfo(puuid: string) {
+    const response = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ method: "fetchSummonerInfo", puuid })
+    });
+
     if (!response.ok) {
-      throw new Error("Error al obtener la información del summoner");
+        throw new Error("Error al obtener la información del summoner");
     }
-    const data = await response.json();
-    return data;
-  }
+
+    return await response.json();
+}
