@@ -52,4 +52,18 @@ function groupSmallCategories(data: { name: string; cantidad: number; }[], thres
     return result;
 }
 
-export { endOfVoting, votingData, groupSmallCategories };
+export interface TournamentInfo {
+    name: string;
+    date: string;
+    description: string;
+    route: string;
+    activeRound: string;
+}
+
+
+const tournaments: TournamentInfo[] = [
+    { name: "LOL", date: "martes", description: "Descripción del torneo de lol, un poco extensa para mostrar info completa del torneo", route: "/lol", activeRound: "Partida de práctica" },
+    { name: "Valorant", date: "viernes", description: "Descripción del torneo de valorant, un poco extensa para mostrar info completa del torneo", route: "/valorant", activeRound: "Partida de práctica" },
+];
+
+export { endOfVoting, votingData, groupSmallCategories, tournaments };
