@@ -4,7 +4,6 @@ import { BsPeopleFill } from "react-icons/bs";
 import { MdLocationPin } from "react-icons/md";
 import TorneosDM from "../utils/torneo.mdx";
 import AnimatedStats from "./notusing/AnimatedStats";
-import FacebookEmbed from "./embed/FacebookEmbed";
 
 const Torneos = () => {
     return (
@@ -41,9 +40,6 @@ export const InfoTorneo = () => {
                     <h3 className="font-questrial font-bold text-xs leading-[1.3rem]" >Semana universitaria</h3>
                 </div>
             </div>
-        </div>
-        <div className="w-full flex justify-center mt-4">
-            <FacebookEmbed url="https://www.facebook.com/bienestarinstitucionaluq/posts/1063589512443741" />
         </div>
 
     </>)
