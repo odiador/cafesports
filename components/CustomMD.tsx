@@ -3,7 +3,7 @@ import { MDXProvider } from "@mdx-js/react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
-import AnimatedStats from "./AnimatedStats";
+import AnimatedStats from "./notusing/AnimatedStats";
 
 
 export default function MDXLayout({ children }: { children: ReactNode }) {

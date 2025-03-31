@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Redirect from "@/components/Redirect";
-import FooterSection from "@/components/FooterSection";
+import FooterSection from "@/components/sections/FooterSection";
 import Cursor from "@/components/Cursor";
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/sections/Navigation";
 import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Geist({
@@ -57,7 +57,7 @@ export default function RootLayout({
         <h1 className="hidden">Cafesports</h1>
         <div className="flex flex-col justify-between min-h-screen">
           <Navigation />
-          <div className="flex-1 flex flex-col pt-20">{children}</div>
+          <div className="flex-1 flex flex-col">{children}</div>
           <Cursor />
           <FooterSection />
         </div>

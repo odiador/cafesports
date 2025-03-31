@@ -3,7 +3,7 @@ import { BiCalendar } from "react-icons/bi";
 import { BsPeopleFill } from "react-icons/bs";
 import { MdLocationPin } from "react-icons/md";
 import TorneosDM from "../utils/torneo.mdx";
-import AnimatedStats from "./AnimatedStats";
+import AnimatedStats from "./notusing/AnimatedStats";
 import FacebookEmbed from "./embed/FacebookEmbed";
 
 const Torneos = () => {
