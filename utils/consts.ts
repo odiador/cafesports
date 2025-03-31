@@ -71,6 +71,18 @@ const lolplayers = [
         "puuid": "NDbOUfvH8XzSWDNsH5vayaBIUlXxW6A29cD9hj_VxOKopV6dsceiTN8cjdRyPur-Lu_0klK7YbwnSg",
         "gameName": "andresddiaz",
         "tagLine": "LAN"
+    },
+    {
+        id: "2",
+        "puuid": "",
+        gameName: "",
+        "tagLine": "LAN"
+    },
+    {
+        id: "3",
+        "puuid": "",
+        gameName: "",
+        "tagLine": "LAN"
     }
 ] as LOLPlayerInfo[];
 

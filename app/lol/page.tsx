@@ -44,35 +44,35 @@ function PlayerCard({ player }: { player: LOLPlayerInfo }) {
   } = useLolData(player.puuid);
 
   if (loading) return (
-    <div className="p-6 border rounded-lg shadow-md animate-pulse">
-      <div className="h-4 bg-gray-200 rounded w-3/4 mb-4"></div>
-      <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+    <div className="p-6 border rounded-lg shadow-md animate-pulse bg-gray-800">
+      <div className="h-4 bg-gray-600 rounded w-3/4 mb-4"></div>
+      <div className="h-4 bg-gray-600 rounded w-1/2"></div>
     </div>
   );
   
   if (error) return (
-    <div className="p-6 border border-red-200 rounded-lg bg-red-50 text-red-600">
+    <div className="p-6 border border-red-400 rounded-lg bg-red-900 text-red-200">
       Error al cargar los datos: {error}
     </div>
   );
 
   return (
-    <div className="p-6 border rounded-lg shadow-md bg-white dark:bg-gray-800">
+    <div className="p-6 border border-gray-700 rounded-lg shadow-md bg-gray-800 text-gray-100">
       <div className="flex items-center gap-4 mb-4">
-        <div className="font-bold text-xl">{player.gameName}</div>
-        <div className="text-sm text-gray-500 dark:text-gray-400">#{player.tagLine}</div>
+        <div className="font-bold text-xl text-white">{player.gameName}</div>
+        <div className="text-sm text-gray-400">#{player.tagLine}</div>
       </div>
 
       {summoner && (
         <div className="mb-4">
-          <div className="text-sm text-gray-600 dark:text-gray-300">Nombre: {player.gameName}</div>
-          <div className="text-sm text-gray-600 dark:text-gray-300">Nivel: {summoner.summonerLevel}</div>
+          <div className="text-sm text-gray-300">Nombre: {player.gameName}</div>
+          <div className="text-sm text-gray-300">Nivel: {summoner.summonerLevel}</div>
         </div>
       )}
 
       {topChampion && championName && championImageUrl && (
         <div className="mt-4">
-          <div className="text-md font-semibold mb-2">Campeón Principal:</div>
+          <div className="text-md font-semibold mb-2 text-gray-200">Campeón Principal:</div>
           <div className="flex items-center gap-3">
             <div className="w-16 h-16 relative overflow-hidden rounded">
               <Image 
@@ -84,11 +84,11 @@ function PlayerCard({ player }: { player: LOLPlayerInfo }) {
               />
             </div>
             <div>
-              <div className="font-medium">{championName}</div>
-              <div className="text-sm">Nivel de maestría: {topChampion.championLevel}</div>
-              <div className="text-sm">Puntos: {topChampion.championPoints.toLocaleString()}</div>
+              <div className="font-medium text-white">{championName}</div>
+              <div className="text-sm text-gray-300">Nivel de maestría: {topChampion.championLevel}</div>
+              <div className="text-sm text-gray-300">Puntos: {topChampion.championPoints.toLocaleString()}</div>
               {topChampion.lastPlayTime && (
-                <div className="text-xs text-gray-500 mt-1">
+                <div className="text-xs text-gray-400 mt-1">
                   Última vez jugado: {new Date(topChampion.lastPlayTime).toLocaleDateString()}
                 </div>
               )}
