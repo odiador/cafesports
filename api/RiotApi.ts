@@ -1,4 +1,4 @@
-const API_URL = "https://riot-api-proxy.luisc-calderonc.workers.dev";
+const API_URL = "https://riot-api-worker.luisc-calderonc.workers.dev";
 
 export async function fetchChampionMastery(puuid: string) {
     const response = await fetch(API_URL, {
