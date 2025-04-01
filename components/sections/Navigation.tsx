@@ -37,9 +37,11 @@ const Navigation = () => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
             }} className="h-full w-fit"><Image src={"/logot.png"} alt={"Logo"} width={408} height={408} className="h-full w-fit" /></Link>
             <div className="flex gap-4 font-teko text-2xl">
-                <Link className="hover:scale-105 transition-all" href={"/events"}>Eventos</Link>
-                <Link className="hover:scale-105 transition-all" href={"/about"}>Nosotros</Link>
-                <Link className="hover:scale-105 transition-all" href={"/gallery"}>Galería</Link>
+                <Link className="hover:scale-105 transition-all" href={"/lol"}>LOL</Link>
+                <Link className="hover:scale-105 transition-all" href={"/valorant"}>Valorant</Link>
+                {/* <Link className="hover:scale-105 transition-all" href={"/lol"}>Eventos</Link>
+                <Link className="hover:scale-105 transition-all" href={"/valorant"}>Nosotros</Link>
+                <Link className="hover:scale-105 transition-all" href={"/gallery"}>Galería</Link> */}
             </div>
             <div className="flex gap-2">
                 {/* <Link
