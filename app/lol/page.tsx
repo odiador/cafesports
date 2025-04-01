@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { lolplayers, type LOLPlayerInfo } from '@/utils/consts';
 import { useLolData } from '@/hooks/usarLolApis';
+import Embeds from '../../components/Embeds';
 
 export default function LolPage() {
   return (
@@ -15,6 +16,11 @@ export default function LolPage() {
           width={400}
           height={100}
         />
+      </div>
+
+      {/* Componente de streaming */}
+      <div className="w-full max-w-3xl px-4 mx-auto mb-8">
+        <Embeds live={true} />
       </div>
 
       <h2 className="text-2xl font-bold mb-6 text-center">Jugadores de League of Legends</h2>
