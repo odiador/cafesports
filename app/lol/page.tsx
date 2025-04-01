@@ -18,7 +18,7 @@ export default function LolPage() {
         />
       </div>
 
-      {/* Componente de streaming */}
+      {/* amaqk embed */}
       <div className="w-full max-w-3xl px-4 mx-auto mb-8">
         <Embeds live={true} />
       </div>

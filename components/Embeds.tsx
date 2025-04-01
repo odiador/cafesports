@@ -23,7 +23,7 @@ const Embeds = ({ live }: { live: boolean }) => {
                 <div className="flex gap-4">
                     <button onClick={() => setShowKick(k => !k)}
                         className="bg-white w-fit text-black transition-all font-semibold rounded-lg px-4 py-2 hover:bg-white/85 flex gap-1 hover:scale-110">Ver aquí</button>
-                    <Link href="https://kick.com/cafesports" className="bg-[#53fd18] w-fit text-black transition-all font-semibold rounded-lg px-4 py-2 flex gap-1 hover:scale-110">o en <FaKickstarter /></Link>
+                    <Link href="https://kick.com/cafesports" className="bg-[#53fd18] w-fit text-black transition-all font-semibold rounded-lg px-4 py-2 flex items-center gap-1 hover:scale-110">o en <FaKickstarter className="inline-block align-text-bottom" /></Link>
                 </div>
                 {showKick && <KickEmbed />}
             </div>
@@ -32,7 +32,7 @@ const Embeds = ({ live }: { live: boolean }) => {
                 <div className="flex gap-4">
                     <button onClick={() => setShowYoutube(k => !k)}
                         className="bg-white w-fit text-black transition-all font-semibold rounded-lg px-4 py-2 hover:bg-white/85 flex gap-1 hover:scale-110">Ver aquí</button>
-                    <Link href="https://youtube.com/@cafesportsclub" className="bg-[#FF0000] w-fit text-white transition-all font-semibold rounded-lg px-4 py-2 flex gap-1 hover:scale-110">o en <FaYoutube /></Link>
+                    <Link href="https://youtube.com/@cafesportsclub" className="bg-[#FF0000] w-fit text-white transition-all font-semibold rounded-lg px-4 py-2 flex items-center gap-1 hover:scale-110">o en <FaYoutube className="inline-block align-text-bottom" /></Link>
                 </div>
                 {showYoutube && <YouTubeEmbed />}
             </div>
