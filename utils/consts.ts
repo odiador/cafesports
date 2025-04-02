@@ -63,7 +63,7 @@ export interface TournamentInfo {
 
 const tournaments: TournamentInfo[] = [
     { name: "LOL", date: "martes", description: "El torneo de LOL, organizado por el programa Ingesis y CafEsports, se jugará en los laboratorios B y C los martes de 11:00 a 14:00. Participan 7 equipos de 5 jugadores cada uno, divididos en 2 bombos (A: 4 equipos, B: 3 equipos). Se enfrentan en fase de grupos, avanzando los 2 mejores de cada bombo a semifinales y luego a la final. Las partidas serán 5v5 en la Grieta del Invocador con bloqueos y durarán máx. 1 hora. Si no terminan en ese tiempo, gana el equipo con más torres destruidas o, en caso de empate, con más oro acumulado. Se permite un suplente y se exige conducta deportiva.", route: "/lol", activeRound: "D1 vs Requiem" },
-    { name: "Valorant", date: "viernes", description: "Descripción por confirmar", route: "/valorant", activeRound: "Por confirmar" },
+    { name: "Valorant", date: "viernes", description: "El torneo de Valorant, organizado por Ingesis, se jugará en los laboratorios B y C los viernes de 11:00 a 14:00. Participan 8 equipos de 5 jugadores en un formato de eliminación directa (Bo3). En cuartos, 8 equipos compiten y 4 avanzan; en semifinales, 4 compiten y 2 avanzan; la final define al campeón. Cada equipo elige un mapa, y el tercero se selecciona al azar con baneo alterno. Se permite un suplente y, en caso de empate, se juegan rondas adicionales. Se exige conducta deportiva.", route: "/valorant", activeRound: "Valo? vs Epitaph" },
 ];
 
 export { endOfVoting, votingData, groupSmallCategories, tournaments };
