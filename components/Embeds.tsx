@@ -41,7 +41,7 @@ const Embeds = () => {
                 return;
             }
             
-            // Si no está en ninguno de los horarios programados
+            // FALSA ERES UNA FALSA
             setIsLive(false);
             setStreamTitle("");
         };
@@ -52,7 +52,7 @@ const Embeds = () => {
         // Verificar cada minuto, la fecha y hora actual
         const intervalId = setInterval(checkStreamSchedule, 60000);
         
-        // Limpiar intervalo 
+        // Estamos clean
         return () => clearInterval(intervalId);
     }, []);
 
