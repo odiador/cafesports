@@ -49,7 +49,7 @@ const KickEmbed = () => {
             <iframe
                 className="size-full"
                 onLoad={() => setShow(false)}
-                src="https://player.kick.com/cafesports?autoplay=true"
+                src="https://player.kick.com/cafesports-club?autoplay=true"
                 allowFullScreen={true}
             />
             <div className="absolute top-1/2 left-1/2 animate-spin z-[1]" style={{ display: show ? "block" : "none" }}><FaSpinner /></div>
