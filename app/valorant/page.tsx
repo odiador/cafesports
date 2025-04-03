@@ -14,7 +14,7 @@ export default function Valorant() {
             
             {/* embed de amaqk */}
             <div className="w-full max-w-3xl px-4">
-                <Embeds live={true} />
+                <Embeds/>
             </div>
         </div>
     );
