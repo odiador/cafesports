@@ -12,7 +12,7 @@ export default function GallerySection() {
     return (
         <section id="gallery" className="bg-[#0e1114] pt-20 flex flex-col items-center">
             <h1>Galería</h1>
-            <div>
+            <div className="max-w-screen w-full overflow-hidden">
                 <Swiper
                     effect={'coverflow'}
                     grabCursor={true}

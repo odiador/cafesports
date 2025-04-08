@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function TournamentSection({ tournamentInfo }: { tournamentInfo: TournamentInfo }) {
     return (
-        <section id="events" className="flex flex-col px-2 pt-20 items-center w-full">
+        <section id="events" className="flex flex-col px-2 pt-20 pb-8 items-center w-full">
             <div className="relative mb-6 flex flex-col">
                 <h1 className="font-bangers px-2">{`Torneo de ${tournamentInfo.name}`}</h1>
                 <div className="place-self-end -rotate-12 text-xl font-nanum flex flex-col leading-[13px] items-center"><span>
