@@ -1,11 +1,11 @@
 "use client";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { BsInstagram, BsTwitch, BsYoutube } from "react-icons/bs";
+import { BsInstagram, BsYoutube } from "react-icons/bs";
 import { SiKick } from "react-icons/si";
 
 const FooterSection = () => {
-    return (<section className="w-full text-xs flex flex-col items-center pt-4 pb-3 gap-1 bg-black/20">
+    return (<section className="w-full text-xs flex flex-col items-center py-8 gap-4 bg-black/20">
         <Link className="font-nanum tracking-tighter cursor-pointer w-56" href={"https://odiador.dev"} target="_blank">
             <motion.div initial="normal" whileHover={"odiador"} className="relative w-full cursor-pointer text-center text-base/[1.25rem] font-bold text-nowrap flex justify-center items-center gap-0">
                 {"Made with ❤️ by "}
@@ -32,12 +32,12 @@ const FooterSection = () => {
                 className="group">
                 <BsInstagram className="text-2xl group-hover:scale-110 transition-all" />
             </Link>
-            <Link
+            {/* <Link
                 href={"http://twitch.tv/cafesportsclub"}
                 target="_blank"
                 className="group">
                 <BsTwitch className="text-2xl group-hover:scale-110 transition-all" />
-            </Link>
+            </Link> */}
             <Link
                 href={"https://www.youtube.com/@cafesportsclub"}
                 target="_blank"

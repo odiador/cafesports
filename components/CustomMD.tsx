@@ -17,8 +17,8 @@ export const mdxComponents = {
     ol: ({ children }: { children: ReactNode }) => (
         <ol className="list-decimal pl-6">{children}</ol>
     ),
-    li: ({ children }: { children: ReactNode }) => (
-        <li className="text-xl font-questrial leading-tight">{children}</li>
+    p: ({ children }: { children: ReactNode }) => (
+        <li className="text-lg list-none font-questrial text-center">{children}</li>
     ),
     a: ({ children, href }: { children: ReactNode, href: string }) => <Link className="" href={href || "#"} target={href?.startsWith("#") ? undefined : "_blank"}>{children}</Link>, // Customize H1
     img: ({ src, alt }: { src: string, alt: string }) => <Image src={src || ""} alt={alt || ""} width={512} height={512} className={alt?.startsWith("mini") ? "size-5" : "w-64 h-fit"} />,

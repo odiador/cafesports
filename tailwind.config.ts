@@ -17,6 +17,7 @@ export default {
         bangers: ["Bangers", "normal"],
         nanum: ["Nanum pen script", "normal"],
         questrial: ["Questrial", "normal"],
+        pressstart: ["'Press Start 2P'", "cursive"],
       },
     },
   },

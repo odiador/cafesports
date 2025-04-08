@@ -57,7 +57,7 @@ export interface TournamentInfo {
     date: string;
     description: string;
     route: string;
-    activeRound: string;
+    activeRound?: string;
 }
 
 
@@ -66,4 +66,35 @@ const tournaments: TournamentInfo[] = [
     { name: "Valorant", date: "viernes", description: "El torneo de Valorant, organizado por Ingesis, se jugará en los laboratorios B y C los viernes de 11:00 a 14:00. Participan 8 equipos de 5 jugadores en un formato de eliminación directa (Bo3). En cuartos, 8 equipos compiten y 4 avanzan; en semifinales, 4 compiten y 2 avanzan; la final define al campeón. Cada equipo elige un mapa, y el tercero se selecciona al azar con baneo alterno. Se permite un suplente y, en caso de empate, se juegan rondas adicionales. Se exige conducta deportiva.", route: "/valorant", activeRound: "Valo? vs Lucidity" },
 ];
 
-export { endOfVoting, votingData, groupSmallCategories, tournaments };
+const aboutUs = "Somos un equipo dedicado a promover los deportes electrónicos en el departamento del Quindío. Bajo el liderazgo de Eyner Andrés Díaz y Juan Manuel Amador, CafEsports ha contado con el respaldo del Programa de Ingeniería de Sistemas y Computación de la Universidad del Quindío, lo que ha permitido fortalecer su presencia en la comunidad académica y gamer. Esta colaboración ha facilitado la organización de torneos y eventos que fomentan la participación de estudiantes y entusiastas de los eSports, contribuyendo al crecimiento y profesionalización de la escena de los deportes electrónicos en la región.";
+
+const getLiveStatus = () => {
+    const now = new Date();
+    const day = now.getDay(); // 0 = domingo, 1 = lunes, 2 = martes, ..., 6 = sábado
+    const hour = now.getHours();
+    const minute = now.getMinutes();
+
+    // Convertir la hora actual a minutos contando desdd la medianoche 
+    const currentTimeInMinutes = hour * 60 + minute;
+
+    // Horarios de stream (en minutos contando desde la  medianoche)
+    const streamStartTime = 11 * 60; // Estpo es: 11:00 AM
+    const streamEndTime = 14 * 60; //  Estos es: 2:00 PM
+
+    let isLive = false;
+    let streamTitle = "";
+    // Verificar si es martes (día 2 en la constante) dentro del horario de stream (11:00 AM a 2:00 PM)
+    if (day === 2 && currentTimeInMinutes >= streamStartTime && currentTimeInMinutes < streamEndTime) {
+        isLive = true;
+        streamTitle = "Torneo de League of Legends";
+    }
+
+    // Verificar si es viernes (día 5 en la constante) dentro del horario de stream (11:00 AM a 2:00 PM)
+    else if (day === 5 && currentTimeInMinutes >= streamStartTime && currentTimeInMinutes < streamEndTime) {
+        isLive = true;
+        streamTitle = "Torneo de Valorant";
+    }
+    return { isLive, streamTitle };
+}
+
+export { endOfVoting, votingData, groupSmallCategories, tournaments, getLiveStatus, aboutUs };

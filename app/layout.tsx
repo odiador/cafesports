@@ -6,6 +6,7 @@ import FooterSection from "@/components/sections/FooterSection";
 import Cursor from "@/components/Cursor";
 import Navigation from "@/components/sections/Navigation";
 import { Analytics } from "@vercel/analytics/react"
+import HeroSection from "@/components/sections/HeroSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,7 +58,8 @@ export default function RootLayout({
         <h1 className="hidden">Cafesports</h1>
         <div className="flex flex-col justify-between min-h-screen">
           <Navigation />
-          <div className="flex-1 flex flex-col">{children}</div>
+          <HeroSection/>
+          <div className="flex-1 flex flex-col z-10">{children}</div>
           <Cursor />
           <FooterSection />
         </div>

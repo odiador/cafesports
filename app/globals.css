@@ -55,3 +55,12 @@ body {
 h1 {
   @apply font-bangers text-6xl text-center flex flex-col text-[#cc86df];
 }
+
+@keyframes breath {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
