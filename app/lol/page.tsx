@@ -10,19 +10,26 @@ export default function Lol() {
                 href={"/files/Reglamento%20del%20Torneo%20de%20LoL.pdf"}>Ver reglas</Link>
             <Image
                 className="h-fit"
+                src={"/lol/winners08apr.jpg"}
+                alt={"Calendario del Bombo A del Torneo de CafEsports de League of Legends"}
+                width={400}
+                height={100}
+            />
+            <Image
+                className="h-fit"
                 src={"/calendarioalol.webp"}
                 alt={"Calendario del Bombo A del Torneo de CafEsports de League of Legends"}
-                width={600}
+                width={400}
                 height={100}
             />
             <Image
                 className="h-fit"
                 src={"/calendarioblol.webp"}
                 alt={"Calendario del Bombo B del Torneo de CafEsports de League of Legends"}
-                width={600}
+                width={400}
                 height={100}
             />
-            <p className="font-questrial font-bold">Próximamente tabla de posiciones</p>
+            <p className="font-questrial font-bold">Próximamente: tabla de posiciones</p>
         </div>
     );
 }
