@@ -25,7 +25,8 @@ export default function GallerySection() {
                         modifier: 1,
                         slideShadows: true,
                     }}
-                    pagination={true}
+                    pagination={{ clickable: true }}
+                    slideToClickedSlide={true}
                     modules={[EffectCoverflow, Pagination]}
                     className="mySwiper"
                 >

@@ -1,4 +1,20 @@
 
+/* Estilo base de los puntos de paginación */
+.swiper-pagination-bullet {
+  background-color: #fff; /* Color de los puntos inactivos */
+  width: 12px; /* Ancho de los puntos */
+  height: 12px; /* Alto de los puntos */
+  opacity: 0.7;
+  margin: 0 5px; /* Espaciado entre los puntos */
+}
+
+/* Estilo para el punto de paginación activo */
+.swiper-pagination-bullet-active {
+  background-color: #007aff; /* Color del punto activo */
+  opacity: 1;
+}
+
+
 .swiper {
   width: 100%;
   padding-top: 50px;
